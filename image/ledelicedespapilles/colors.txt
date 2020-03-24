@@ -1,0 +1,9 @@
+Background-color: hsl(180, 6%, 93%) 
+
+Navy color: hsl(231, 100%, 43%)
+
+Cobalt color: hsl(213, 95%, 49%)
+
+Arctic color: hsl(206, 95%, 56%)
+
+Gradient bright color: hsl(208, 97%, 51%)

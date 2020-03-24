@@ -1,0 +1,12 @@
+backgroud-color: hsl(306, 100%, 98%)
+
+orange-text: hsl(33, 84%, 42%)
+
+purple text: hsl(312, 25%, 53%)
+
+blue text: hsl(256, 56%, 55%)
+
+Gradient text:
+ - orange: hsl(34, 84%, 48%)
+ - blue : hsl(259, 99%, 68%)
+

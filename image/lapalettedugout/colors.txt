@@ -1,0 +1,10 @@
+Fonts : KAUSHAN SCRIPT + 
+
+Backgroug-color: hsl(120, 100%, 100%)
+
+Emerald green color : hsl(118, 43%, 40%)
+
+Lime bright color : hsl(90, 100%, 75%)
+
+
+transition color: hsl(101, 51%, 58%)

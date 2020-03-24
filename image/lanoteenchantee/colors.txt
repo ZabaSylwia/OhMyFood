@@ -1,0 +1,4 @@
+Background-color: hsl(7, 85%, 93%)
+
+text color : hsl(351, 53%, 16%)
+
