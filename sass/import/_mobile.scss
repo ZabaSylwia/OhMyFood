@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* -------------------------------------------------*/
+
+/* _mobile.scss (des smartphones aux phablettes)    */
+
+/* -------------------------------------------------*/
+body:before {
+    @include bandeau-resolution;
+    content: "Version mobile";   
+}
+
+/* -----ACCUEIL-----*/   
+
+
+/* @media query optionnelle (max-width: 640px)*/
+@media (max-width: 640px) {
+
+} /* Fin de @media query optionnelle (max-width: 640px)*/

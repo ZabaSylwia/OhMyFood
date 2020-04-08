@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+/* -------------------------------------------------*/
+
+/* _commun.scss (styles communs a tous les peripheriques et toutes les pages. Ce qui vient en supplément des éléments génériques classiques comme les titres/boutons/liens/espaces qu'on retrouvera sur les fichiers atomes et molécules) */
+
+/* -----GENERAL-----*/
+
+@mixin bandeau-resolution {
+    color: $primary-color-dark;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+::selection {
+    background: #000000; /* Webkit */
+}
+::-moz-selection {
+    background: #000000; /* Firefox */
+}
+::-webkit-input-placeholder {
+    color: #000000;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #000000;
+}
+
+/* quand on a oublié l'attribut 'alt' */
+img:not([alt]) {
+    border: 5px dashed red;
+}
+
+/* -----HEADER-----*/
+
+header{
+    background: $primary-color;
+    colo
+}
+
+/* -----CONTENT-----*/
+
+/* -----FOOTER-----*/

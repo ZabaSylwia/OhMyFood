@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------------------------------    */
+
+/* _atomes.scss  (matière première : couleurs/typographie/espaces)         	             */
+
+/* ----------------------------------------------------------------------------------    */
+
+
+/* -----COULEURS-----*/
+$primary-color: green;
+$primary-color-light: red;
+$primary-color-dark: #000000;
+
+
+$secondary-color: #000000;
+$secondary-color-light: #000000;
+$secondary-color-dark: #000000;
+
+
+/* -----TYPOGRAPHIE-----*/
+$primary-typo: 'Raleway', sans-serif;
+$secondary-typo: verdana,sans-serif;
+
+
+/* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
+$marge-int-gauche-md: 0rem;
+$marge-int-droite-md: 0rem;
+$marge-int-haut-md: 0rem;
+$marge-int-bas-md: 0rem;
+
+@mixin marges-int-horizontales-md {
+    padding-left: $marge-int-gauche-md;
+    padding-right: $marge-int-droite-md;
+}
+
+
+@mixin marges-int-verticales-md {
+    padding-top: $marge-int-haut-md;
+    padding-bottom: $marge-int-bas-md;
+}
+
+
+/* -----ESPACES MOBILES ET TABLETTES-----*/
+$marge-int-gauche-sm: 0rem;
+$marge-int-droite-sm: 0rem;
+$marge-int-haut-sm: 0rem;
+$marge-int-bas-sm: 0rem;
+
+@mixin marges-int-horizontales-sm {
+    padding-left: $marge-int-gauche-sm;
+    padding-right: $marge-int-droite-sm;
+}
+
+@mixin marges-int-verticales-sm {
+    padding-top: $marge-int-haut-sm;
+    padding-bottom: $marge-int-bas-sm;
+}
+
+/* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: div {@include marges-int-horizontales-md} */
