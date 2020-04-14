@@ -8,10 +8,11 @@
 
 h1,
 .h1-like {
-    margin: 0.6563em 0 0 0;     
+    margin:auto;     
     line-height: 1.3126;
-    font-weight: 100;
-    color: $primary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
+    font-weight: bold;
+    font-size: 4rem;
+    /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $primary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h2,
@@ -22,19 +23,19 @@ h2,
     font-size: 4rem;
     line-height: 1.5;
     font-weight: 100;
-    color: $primary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $primary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    /* à déterminer selon les variables COULEURS du fichier _atomes */
+    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h3,
 .h3-like {
-    margin: 0.875em 0 0 0;
+    margin: auto;
     font-size: 1.7143em;
     /* equiv 24px */
     font-size: 3rem;
     line-height: 1.75;
     font-weight: 100;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h4,
 .h4-like {
@@ -44,8 +45,8 @@ h4,
     font-size: 2rem;
     line-height: 1.05;
     font-weight: 100;
-    color: $secondary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+     /* à déterminer selon les variables COULEURS du fichier _atomes */
+    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h5,
 .h5-like {
@@ -54,8 +55,8 @@ h5,
     /* equiv 18px */
     font-size: 1.8rem;
     line-height: 1.1667;
-    color: $secondary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+     /* à déterminer selon les variables COULEURS du fichier _atomes */
+     /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h6,
 .h6-like {
@@ -64,19 +65,35 @@ h6,
     /* equiv 16px */
     font-size: 1.6rem;
     line-height: 1.3125;
-    color: $secondary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+     /* à déterminer selon les variables COULEURS du fichier _atomes */
+    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 
 a {
     /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
-    text-decoration: underline;
+   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    text-decoration: none;
+    margin: auto;
 }
 
 p {
+    margin: auto;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 5px grey;
 }
 
 
@@ -93,8 +110,8 @@ p {
 
 /* Appliquer le hover quand l'appareil le permet */
 @media (hover: hover) {
-  .button:hover {
+.button:hover {
   /* hover styles */
-      @include button-general-hover {}
-  }
+    @include button-general-hover {}
+    }
 }

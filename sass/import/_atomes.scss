@@ -8,28 +8,47 @@
 
 
 /* -----COULEURS-----*/
-$primary-color: hsl(44, 97%, 63%) ;
+$primary-color-text: hsl(44, 97%, 63%) ;
 $primary-color-background:  hsl(162, 28%, 48%);
-$primary-color-dark: #000000;
-
-
+$primary-color-dark: red;
 $secondary-color: hsl(0, 0%, 100%);
-$secondary-color-light: #000000;
-$secondary-color-dark: #000000;
 
-$lanoteenchantee-background: hsl(7, 85%, 93%);
-$lanoteenchantee-text: hsl(351, 53%, 16%);
+$lanoteenchantee__background: hsl(7, 85%, 93%);
+$lanoteenchantee__text: hsl(351, 53%, 16%);
 
 $lechicalafrancaise__background: hsl(306, 100%, 98%);
 $lechicalafrancaise__text--1: hsl(33, 84%, 42%);
 $lechicalafrancaise__text--2: hsl(312, 25%, 53%);
 $lechicalafrancaise__text--3: hsl(256, 56%, 55%);
+/*Gradient text:
+ - orange: hsl(34, 84%, 48%)
+ - blue : hsl(259, 99%, 68%)*/
+
+$ledelicedespapilles__backrgound: hsl(180, 6%, 93%);
+$ledelicedespapilles__text--1: hsl(231, 100%, 43%); /*navy*/
+$ledelicedespapilles__text--2: hsl(231, 100%, 43%); /*navy*/
+$ledelicedespapilles__text--3: hsl(206, 95%, 56%); /*artic*/
+/*Gradient bright color: hsl(208, 97%, 51%)*/
+
+$lapalettedugout__background: hsl(120, 100%, 100%);
+$lapalettedugout__text--1: hsl(118, 43%, 40%); /*emerald color*/
+$lapalettedugout__text--2: hsl(90, 100%, 75%); /* lime bright*/
+$lapalettedugout__text--0-5: hsl(101, 51%, 58%); /*transition color*/
 
 
 /* -----TYPOGRAPHIE-----*/
-$primary-typo: 'Raleway', sans-serif;
+$primary-typo: 'Montserrat', sans-serif;
 $secondary-typo: verdana,sans-serif;
 
+$lanoteenchantee__typo: 'Devonshire', cursive;
+
+$lechicalafrancaise__typo: 'Croissant One', cursive, sans-serif;
+$lechicalafrancaise__typo--secondary: "Courier New", sans-serif;
+
+$ledelicedespapilles__typo: 'Dancing Script', cursive; 
+$ledelicedespapilles__typo--secondary: "Comic Sans MS", sans-serif;
+
+$lapalettedugout__typo: 'Kaushan Script', cursive, sans-serif;
 
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 $marge-int-gauche-md: 0rem;

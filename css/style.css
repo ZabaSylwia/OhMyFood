@@ -20,7 +20,8 @@ body {
 html,
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
 
 ul,
 ol {
@@ -143,6 +144,16 @@ a {
 /* _atomes.scss  (matière première : couleurs/typographie/espaces)         	             */
 /* ----------------------------------------------------------------------------------    */
 /* -----COULEURS-----*/
+/*Gradient text:
+ - orange: hsl(34, 84%, 48%)
+ - blue : hsl(259, 99%, 68%)*/
+/*navy*/
+/*navy*/
+/*artic*/
+/*Gradient bright color: hsl(208, 97%, 51%)*/
+/*emerald color*/
+/* lime bright*/
+/*transition color*/
 /* -----TYPOGRAPHIE-----*/
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 /* -----ESPACES MOBILES ET TABLETTES-----*/
@@ -152,12 +163,12 @@ a {
 /* ----------------------------- */
 h1,
 .h1-like {
-  margin: 0.6563em 0 0 0;
+  margin: auto;
   line-height: 1.3126;
-  font-weight: 100;
-  color: #fccb45;
+  font-weight: bold;
+  font-size: 4rem;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 h2,
@@ -168,21 +179,18 @@ h2,
   font-size: 4rem;
   line-height: 1.5;
   font-weight: 100;
-  color: #fccb45;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: "Raleway", sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 h3,
 .h3-like {
-  margin: 0.875em 0 0 0;
+  margin: auto;
   font-size: 1.7143em;
   /* equiv 24px */
   font-size: 3rem;
   line-height: 1.75;
   font-weight: 100;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 h4,
@@ -193,9 +201,7 @@ h4,
   font-size: 2rem;
   line-height: 1.05;
   font-weight: 100;
-  color: white;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 h5,
@@ -205,9 +211,7 @@ h5,
   /* equiv 18px */
   font-size: 1.8rem;
   line-height: 1.1667;
-  color: white;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 h6,
@@ -217,21 +221,45 @@ h6,
   /* equiv 16px */
   font-size: 1.6rem;
   line-height: 1.3125;
-  color: white;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 a {
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
-  text-decoration: underline; }
+  text-decoration: none;
+  margin: auto; }
 
 p {
+  margin: auto;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: verdana, sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey; }
 
 /* -----BOUTONS-----*/
 /* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: a {@include button-general} */
@@ -265,53 +293,48 @@ img:not([alt]) {
   border: 5px dashed red; }
 
 /* -----HEADER-----*/
-header {
+.header {
   background: #589d88;
   color: #fccb45;
-  font-size: 3rem; }
+  padding: 5%; }
 
 /* -----CONTENT-----*/
-main {
-  background: white; }
-
-a {
-  text-decoration: none; }
-
-article {
-  -webkit-box-shadow: 2px 2px 12px grey;
-          box-shadow: 2px 2px 12px grey; }
-
-.block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 10%; }
-  .block .block__lanoteenchantee {
-    background: #fce2de; }
-  .block .block__lechicalafrancaise {
-    background: #fff5fe; }
-
-.block__lanoteenchantee--text {
-  color: #3e131a; }
+.block__lanoteenchantee {
+  background: #fce2de;
+  color: #3e131a;
+  font-style: "Devonshire", cursive; }
 
 /* -----FOOTER-----*/
 footer {
   background-color: #589d88;
-  color: #fccb45; }
+  color: #fccb45;
+  font-family: "Montserrat", sans-serif; }
 
 /* -------------------------------------------------*/
 /* _mobile.scss (des smartphones aux phablettes)    */
 /* -------------------------------------------------*/
 body:before {
-  color: #000000;
+  color: red;
   width: 100%;
   display: block;
   text-align: center;
   content: "Version mobile"; }
 
 /* -----ACCUEIL-----*/
-h1 {
-  font-size: 2rem; }
+article {
+  width: 90%;
+  height: 30rem;
+  margin: 1rem; }
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0; }
 
 /* @media query optionnelle (max-width: 640px)*/
 /* Fin de @media query optionnelle (max-width: 640px)*/
@@ -320,7 +343,7 @@ h1 {
 /* ----------------------------------------------------------------- */
 @media (min-width: 40.063em) {
   body:before {
-    color: #000000;
+    color: red;
     width: 100%;
     display: block;
     text-align: center;
@@ -333,7 +356,7 @@ h1 {
 /* -------------------------------- */
 @media (min-width: 64.063em) {
   body:before {
-    color: #000000;
+    color: red;
     width: 100%;
     display: block;
     text-align: center;

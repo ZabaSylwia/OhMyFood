@@ -34,49 +34,24 @@ img:not([alt]) {
 
 /* -----HEADER-----*/
 
-header{
+.header{
     background: $primary-color-background;
-    color: $primary-color; 
-    font-size: 3rem;   
+    color: $primary-color-text;     
+    padding: 5%;  
 }
 
 /* -----CONTENT-----*/
-
-main{
-    background: $secondary-color;
+.block__lanoteenchantee{
+    background: $lanoteenchantee__background;
+    color: $lanoteenchantee__text;
+    font-style: $lanoteenchantee__typo;
 }
-
-a{
-    text-decoration: none;
-}
-
-article{
-    box-shadow: 2px 2px 12px grey;
-}
-
-.block{
-    display: flex;    
-    padding: 0 10%;
-
-
-    .block__lanoteenchantee{
-        background: $lanoteenchantee-background;        
-    }
-    .block__lechicalafrancaise{
-        background: $lechicalafrancaise__background; 
-    }
-    
-}
-
-.block__lanoteenchantee--text{
-    color: $lanoteenchantee-text;
-}
-
 
 
 /* -----FOOTER-----*/
 
 footer{
     background-color: $primary-color-background;
-    color: $primary-color;
+    color: $primary-color-text;
+    font-family: $primary-typo;
 }
