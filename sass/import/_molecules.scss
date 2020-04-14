@@ -8,10 +8,7 @@
 
 h1,
 .h1-like {
-    margin: 0.6563em 0 0 0;
-    font-size: 2.2857em;
-    /* equiv 32px */
-    font-size: 7rem;
+    margin: 0.6563em 0 0 0;     
     line-height: 1.3126;
     font-weight: 100;
     color: $primary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
@@ -36,7 +33,7 @@ h3,
     font-size: 3rem;
     line-height: 1.75;
     font-weight: 100;
-    color: $secondary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
+     /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 h4,
@@ -72,13 +69,13 @@ h6,
 }
 
 a {
-    color: $primary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
+    /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
     text-decoration: underline;
 }
 
 p {
-    color: $primary-color; /* à déterminer selon les variables COULEURS du fichier _atomes */
+     /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $secondary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 

@@ -8,14 +8,22 @@
 
 
 /* -----COULEURS-----*/
-$primary-color: green;
-$primary-color-light: red;
+$primary-color: hsl(44, 97%, 63%) ;
+$primary-color-background:  hsl(162, 28%, 48%);
 $primary-color-dark: #000000;
 
 
-$secondary-color: #000000;
+$secondary-color: hsl(0, 0%, 100%);
 $secondary-color-light: #000000;
 $secondary-color-dark: #000000;
+
+$lanoteenchantee-background: hsl(7, 85%, 93%);
+$lanoteenchantee-text: hsl(351, 53%, 16%);
+
+$lechicalafrancaise__background: hsl(306, 100%, 98%);
+$lechicalafrancaise__text--1: hsl(33, 84%, 42%);
+$lechicalafrancaise__text--2: hsl(312, 25%, 53%);
+$lechicalafrancaise__text--3: hsl(256, 56%, 55%);
 
 
 /* -----TYPOGRAPHIE-----*/
