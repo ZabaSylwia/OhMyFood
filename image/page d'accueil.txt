@@ -1,0 +1,7 @@
+header + footer background : hsl(162, 28%, 48%)
+header + footer color: hsl(44, 97%, 63%)
+
+main backgroud : hsl(0, 0%, 100%)
+
+
+color titre chaque page : hsl(0, 0%, 21%)
