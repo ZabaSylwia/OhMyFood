@@ -41,11 +41,104 @@ img:not([alt]) {
 }
 
 /* -----CONTENT-----*/
+
+/*Page d'accueil*/
+
+.block{
+    a:visited{
+        color: inherit;
+    }
+}
+
 .block__lanoteenchantee{
     background: $lanoteenchantee__background;
     color: $lanoteenchantee__text;
-    font-style: $lanoteenchantee__typo;
+    &--title{
+        font-style: $lanoteenchantee__typo;
+    }
 }
+
+.block__lechicalafrancaise{
+    background: $lechicalafrancaise__background;
+    &--title{
+        font-family: $lechicalafrancaise__typo;
+    }
+    p, h3{
+        color: $lechicalafrancaise__text--1;
+    }
+}
+
+.block__ledelicedespapilles{
+    background: $ledelicedespapilles__backrgound;
+    &--title{
+        font-family: $ledelicedespapilles__typo;
+    }
+    p, h3{
+        color: $ledelicedespapilles__text--1;
+    }
+}
+
+.block__lapalettedugout{
+    background: $lapalettedugout__background;
+    &--title{
+        font-family: $lapalettedugout__typo;
+    }
+    p, h3{
+        color: $lapalettedugout__text--2;
+    }
+}
+
+.btn{
+    @include button-general;
+}
+
+/* page - lanoteenchantee*/
+
+main section{
+    @include section-border($lanoteenchantee__background);
+}
+
+.lanoteenchantee{
+    color: $lanoteenchantee__text;
+    h3{
+    font-family: $lanoteenchantee__typo;
+    }
+}
+
+.img{
+    width: 4rem;
+    height: auto;
+    &__deco{
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    span{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+h5{
+    flex: 1;
+}
+
 
 
 /* -----FOOTER-----*/
