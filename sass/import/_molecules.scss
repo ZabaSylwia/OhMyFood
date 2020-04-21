@@ -10,7 +10,7 @@ h1,
 .h1-like {
     margin:auto;     
     line-height: 1.3126;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 4rem;
     /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $primary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
@@ -28,12 +28,10 @@ h2,
 }
 h3,
 .h3-like {
-    margin: auto;
-    font-size: 1.7143em;
-    /* equiv 24px */
-    font-size: 3rem;
+    margin: auto;/* equiv 24px */
+    font-size: 4rem;
     line-height: 1.75;
-    font-weight: 100;
+    font-weight:100;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
     /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
@@ -50,11 +48,11 @@ h4,
 }
 h5,
 .h5-like {
-    margin: 1.1667em 0 0 0;
-    font-size: 1.2857em;
-    /* equiv 18px */
-    font-size: 1.8rem;
+    
+    font-size: 1.6rem;
     line-height: 1.1667;
+    margin: 0;
+    padding: 0;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
      /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
@@ -78,6 +76,7 @@ a {
 
 p {
     margin: auto;
+    font-size: 1.5em;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
     /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
@@ -86,6 +85,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -97,9 +97,17 @@ section{
 }
 
 
-/* -----BOUTONS-----*/
-@mixin button-general {
 
+
+/* -----BOUTONS-----*/
+@mixin button-general{
+    background: hsl(162, 28%, 48%);
+    color: hsl(44, 97%, 63%);
+    border: 1px hsl(162, 28%, 48%);
+    font-size: 3rem;
+    margin: 2rem auto;
+    padding: 0.5rem 3rem;
+    border-radius: 10px;
 }
 
 @mixin button-general-hover {
@@ -114,4 +122,11 @@ section{
   /* hover styles */
     @include button-general-hover {}
     }
+}
+
+@mixin section-border ($color: $primary-color-background){
+    border: 1px solid $color;
+    background: $color;
+    margin: 1.2rem;
+    padding: 1.5rem;
 }
