@@ -125,12 +125,6 @@ ul {
 a {
   font-weight: 100; }
 
-@-webkit-viewport {
-  width: device-width;
-  zoom: 1.0; }
-@-moz-viewport {
-  width: device-width;
-  zoom: 1.0; }
 @-ms-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -145,8 +139,8 @@ a {
 /* ----------------------------------------------------------------------------------    */
 /* -----COULEURS-----*/
 /*Gradient text:
- - orange: hsl(34, 84%, 48%)
- - blue : hsl(259, 99%, 68%)*/
+- orange: hsl(34, 84%, 48%)
+- blue : hsl(259, 99%, 68%)*/
 /*navy*/
 /*navy*/
 /*artic*/
@@ -165,7 +159,7 @@ h1,
 .h1-like {
   margin: auto;
   line-height: 1.3126;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 4rem;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   font-family: "Montserrat", sans-serif;
@@ -185,9 +179,8 @@ h2,
 h3,
 .h3-like {
   margin: auto;
-  font-size: 1.7143em;
   /* equiv 24px */
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 1.75;
   font-weight: 100;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
@@ -206,11 +199,10 @@ h4,
 
 h5,
 .h5-like {
-  margin: 1.1667em 0 0 0;
-  font-size: 1.2857em;
-  /* equiv 18px */
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.1667;
+  margin: 0;
+  padding: 0;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
@@ -232,6 +224,7 @@ a {
 
 p {
   margin: auto;
+  font-size: 1.5em;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
@@ -245,7 +238,10 @@ section {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .block {
   display: -webkit-box;
@@ -299,10 +295,104 @@ img:not([alt]) {
   padding: 5%; }
 
 /* -----CONTENT-----*/
+/*Page d'accueil*/
+.block a:visited {
+  color: inherit; }
+
 .block__lanoteenchantee {
   background: #fce2de;
-  color: #3e131a;
-  font-style: "Devonshire", cursive; }
+  color: #3e131a; }
+  .block__lanoteenchantee--title {
+    font-style: "Devonshire", cursive; }
+
+.block__lechicalafrancaise {
+  background: #fff5fe; }
+  .block__lechicalafrancaise--title {
+    font-family: "Croissant One", cursive, sans-serif; }
+  .block__lechicalafrancaise p, .block__lechicalafrancaise h3 {
+    color: #c57411; }
+
+.block__ledelicedespapilles {
+  background: #eceeee; }
+  .block__ledelicedespapilles--title {
+    font-family: "Dancing Script", cursive; }
+  .block__ledelicedespapilles p, .block__ledelicedespapilles h3 {
+    color: #0021db; }
+
+.block__lapalettedugout {
+  background: white; }
+  .block__lapalettedugout--title {
+    font-family: "Kaushan Script", cursive, sans-serif; }
+  .block__lapalettedugout p, .block__lapalettedugout h3 {
+    color: #bfff80; }
+
+.btn {
+  background: #589d88;
+  color: #fccb45;
+  border: 1px #589d88;
+  font-size: 3rem;
+  margin: 2rem auto;
+  padding: 0.5rem 3rem;
+  border-radius: 10px; }
+
+/* page - lanoteenchantee*/
+main section {
+  border: 1px solid #fce2de;
+  background: #fce2de;
+  margin: 1.2rem;
+  padding: 1.5rem; }
+
+.lanoteenchantee {
+  color: #3e131a; }
+  .lanoteenchantee h3 {
+    font-family: "Devonshire", cursive; }
+
+.img {
+  width: 4rem;
+  height: auto; }
+  .img__deco {
+    width: 30%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 0; }
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .menu div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  ul span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+h5 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
 
 /* -----FOOTER-----*/
 footer {
@@ -321,10 +411,14 @@ body:before {
   content: "Version mobile"; }
 
 /* -----ACCUEIL-----*/
-article {
+.block {
   width: 90%;
   height: 30rem;
   margin: 1rem; }
+
+.block img {
+  width: 4rem;
+  height: 4rem; }
 
 footer {
   display: -webkit-box;
