@@ -11,10 +11,15 @@ body:before {
 }
 
 /* -----ACCUEIL-----*/   
-article{
+.block{
     width: 90%;
     height: 30rem;
     margin: 1rem;
+}
+
+.block img{
+    width: 4rem;
+    height: 4rem;
 }
 
 
