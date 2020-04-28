@@ -36,6 +36,16 @@ $lapalettedugout__text--2: hsl(90, 100%, 75%); /* lime bright*/
 $lapalettedugout__text--0-5: hsl(101, 51%, 58%); /*transition color*/
 
 
+
+/*maps*/
+
+$bg-color: (
+    1: $lanoteenchantee__background,
+    2: $lechicalafrancaise__background,
+    3: $ledelicedespapilles__backrgound,
+    4: $lapalettedugout__background
+);
+
 /* -----TYPOGRAPHIE-----*/
 $primary-typo: "Montserrat", sans-serif;
 
@@ -51,11 +61,28 @@ $ledelicedespapilles__typo--secondary: "Chilanka", sans-serif;
 $lapalettedugout__typo: "Kaushan Script", cursive, sans-serif;
 $lapalettedugout__typo--secondary: "Chilanka", sans-serif;
 
+
+/*maps*/
+
+$title-typo:(
+    1: $lanoteenchantee__typo,
+    2: $lechicalafrancaise__typo,
+    3: $ledelicedespapilles__typo,
+    4: $lapalettedugout__typo
+);
+
+$txt-typo:(
+    1: $lanoteenchantee__typo--secondary,
+    2: $lechicalafrancaise__typo--secondary,
+    3: $ledelicedespapilles__typo--secondary,
+    4: $lapalettedugout__typo--secondary
+);
+
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
-$marge-int-gauche-md: 0rem;
-$marge-int-droite-md: 0rem;
-$marge-int-haut-md: 0rem;
-$marge-int-bas-md: 0rem;
+$marge-int-gauche-md: 5rem;
+$marge-int-droite-md: 5rem;
+$marge-int-haut-md: 5rem;
+$marge-int-bas-md: 5rem;
 
 @mixin marges-int-horizontales-md {
     padding-left: $marge-int-gauche-md;
