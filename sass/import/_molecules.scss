@@ -6,6 +6,97 @@
 
 /* ----------------------------- */
 
+$acceuil-colors: (
+    txt: $primary-color-text,
+    bg: $primary-color-background,
+    bg-light: $secondary-color
+);
+
+
+
+$colors: (
+    lanoteenchantee-colors: (
+        txt: $lanoteenchantee__text,
+        bg: $lapalettedugout__background
+    ),
+    lechicalafrancaise-colors: (
+        txt1: $lechicalafrancaise__text--1,
+        txt2: $lechicalafrancaise__text--2,
+        txt3: $lechicalafrancaise__text--3,
+        bg: $lechicalafrancaise__background
+    ),
+    ledelicedespapilles-colors:(
+        bg: $ledelicedespapilles__backrgound,
+        txt1: $ledelicedespapilles__text--1,
+        txt2: $ledelicedespapilles__text--2,
+        txt3: $ledelicedespapilles__text--3
+    ),
+    lapalettedugout-colors:(
+        bg: $lapalettedugout__background,
+        txt1: $lapalettedugout__text--1,
+        txt2: $lapalettedugout__text--2
+    ),
+);
+
+$typo: (
+    lanoteenchantee:(
+        title: $lanoteenchantee__typo,
+        txt: $lanoteenchantee__typo--secondary
+    ),
+    lechicalafrancaise: (
+        title: $lechicalafrancaise__typo,
+        txt: $lechicalafrancaise__typo--secondary
+    ),
+    ledelicedespapilles: (
+        title: $ledelicedespapilles__typo,
+        txt: $ledelicedespapilles__typo--secondary
+    ),
+    lapalettedugout: (
+        title: $lapalettedugout__typo,
+        txt: $lapalettedugout__typo--secondary
+    ),
+);
+
+
+@mixin typo-title($title){
+    @each $txt, $typography in $title{
+        &:#{$txt}{
+            font-family: map-get($typography, title);
+        }
+    }
+}
+
+
+@mixin menu-colors($restaurant){
+    @each $menu, $color in $restaurant {
+        &:#{$menu}{
+        border: 0.1rem solid gray;
+        box-shadow: 2rem 2rem 6rem gray;
+        background-color: map-get($color, bg);
+        color: map-get($color, txt1);
+        }
+    }
+}
+
+
+.block{
+    &__lanoteenchantee{
+        @include menu-colors(colors);
+    }
+    &__lechicalafrancaise{
+        @include menu-colors(colors);
+    }
+}
+
+
+.header{
+    h1{
+        color: map-get($acceuil-colors, txt);
+        background-color: map-get($acceuil-colors, bg);
+    }
+}
+
+
 h1,
 .h1-like {
     margin:auto;     
