@@ -7,6 +7,7 @@
 /* ----------------------------------------------------------------------------------    */
 
 
+
 /* -----COULEURS-----*/
 $primary-color-text: hsl(44, 97%, 63%) ;
 $primary-color-background:  hsl(162, 28%, 48%);
@@ -16,7 +17,7 @@ $secondary-color: hsl(0, 0%, 100%);
 $lanoteenchantee__background: hsl(7, 85%, 93%);
 $lanoteenchantee__text: hsl(351, 53%, 16%);
 
-$lechicalafrancaise__background: hsl(306, 100%, 98%);
+$lechicalafrancaise__background: hsl(306, 67%, 92%);
 $lechicalafrancaise__text--1: hsl(33, 84%, 42%);
 $lechicalafrancaise__text--2: hsl(312, 25%, 53%);
 $lechicalafrancaise__text--3: hsl(256, 56%, 55%);
@@ -50,6 +51,34 @@ $ledelicedespapilles__typo--secondary: "Chilanka", sans-serif;
 
 $lapalettedugout__typo: "Kaushan Script", cursive, sans-serif;
 $lapalettedugout__typo--secondary: "Chilanka", sans-serif;
+
+/*---MAPS---*/
+
+$bg-color: (
+    1: $lanoteenchantee__background,
+    2: $lechicalafrancaise__background,
+    3: $ledelicedespapilles__backrgound,
+    4: $lapalettedugout__background
+);
+$title-typo:(
+    1: $lanoteenchantee__typo,
+    2: $lechicalafrancaise__typo,
+    3: $ledelicedespapilles__typo,
+    4: $lapalettedugout__typo
+);
+
+$txt-typo:(
+    1: $lanoteenchantee__typo--secondary,
+    2: $lechicalafrancaise__typo--secondary,
+    3: $ledelicedespapilles__typo--secondary,
+    4: $lapalettedugout__typo--secondary
+);
+
+@mixin menu($number){
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($title-typo, $number );
+}
+
 
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 $marge-int-gauche-md: 0rem;
@@ -85,4 +114,10 @@ $marge-int-bas-sm: 0rem;
     padding-bottom: $marge-int-bas-sm;
 }
 
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: div {@include marges-int-horizontales-md} */

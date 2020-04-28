@@ -155,84 +155,51 @@ a {
 /* lime bright*/
 /*transition color*/
 /* -----TYPOGRAPHIE-----*/
+/*---MAPS---*/
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 /* -----ESPACES MOBILES ET TABLETTES-----*/
 /* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: div {@include marges-int-horizontales-md} */
 /* ----------------------------- */
 /* _molecules.scss (éléments génériques comme les titres/boutons/liens/paragraphes qu'on retrouvera sur le fichier molécules) */
 /* ----------------------------- */
-h1,
-.h1-like {
+h1 {
   margin: auto;
   line-height: 1.3126;
-  font-weight: 500;
-  font-size: 4rem;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #fccb45;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   font-family: "Montserrat", sans-serif;
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
-h2,
-.h2-like {
-  margin: 0.75em 0 0 0;
-  font-size: 2em;
-  /* equiv 28px */
-  font-size: 4rem;
-  line-height: 1.5;
-  font-weight: 100;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
-
-h3,
-.h3-like {
+h3 {
   margin: auto;
   /* equiv 24px */
-  font-size: 4rem;
+  font-size: 3.3rem;
   line-height: 1.75;
   font-weight: 100;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
+  margin-bottom: 1rem; }
 
-h4,
-.h4-like {
-  margin: 1.05em 0 0 0;
-  font-size: 1.4286em;
-  /* equiv 20px */
-  font-size: 2rem;
-  line-height: 1.05;
-  font-weight: 100;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
-
-h5,
-.h5-like {
-  font-size: 1.6rem;
+h5 {
+  font-size: 3rem;
   line-height: 1.1667;
   margin: 0;
   padding: 0;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
-
-h6,
-.h6-like {
-  margin: 1.3125em 0 0 0;
-  font-size: 1.1429em;
-  /* equiv 16px */
-  font-size: 1.6rem;
-  line-height: 1.3125;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 a {
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
   text-decoration: none;
   margin: auto; }
+  a:visited {
+    color: inherit; }
 
 p {
   margin: auto;
-  font-size: 1.5em;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
+  font-size: 4rem; }
 
 section {
   display: -webkit-box;
@@ -249,7 +216,7 @@ section {
       -ms-flex-align: center;
           align-items: center; }
 
-.block {
+.menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,8 +227,45 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .menu div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  ul span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
 /* -----BOUTONS-----*/
 /* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: a {@include button-general} */
@@ -297,116 +301,100 @@ img:not([alt]) {
 /* -----HEADER-----*/
 .header {
   background: #589d88;
-  color: #fccb45;
   padding: 5%; }
 
 /* -----CONTENT-----*/
 /*Page d'accueil*/
-.block a:visited {
-  color: inherit; }
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey; }
 
 .block__lanoteenchantee {
-  background: #fce2de;
+  background-color: #fce2de;
+  font-family: "Devonshire", cursive, sans-serif;
   color: #3e131a; }
-  .block__lanoteenchantee--title {
-    font-family: "Devonshire", cursive, sans-serif; }
-  .block__lanoteenchantee--text {
-    font-family: "Abril Fatface", sans-serif; }
+  .block__lanoteenchantee p {
+    font-family: "Itim", cursive, sans-serif;
+    font-style: italic; }
 
 .block__lechicalafrancaise {
-  background: #fff5fe; }
-  .block__lechicalafrancaise--title {
-    font-family: "Kurale", cursive, sans-serif; }
-  .block__lechicalafrancaise p, .block__lechicalafrancaise h3 {
-    color: #c57411; }
+  background-color: #f8ddf6;
+  font-family: "Kurale", cursive, sans-serif;
+  color: #c57411; }
+  .block__lechicalafrancaise p {
+    font-family: "Abril Fatface", sans-serif; }
 
 .block__ledelicedespapilles {
-  background: #eceeee; }
-  .block__ledelicedespapilles--title {
-    font-family: "Dancing Script", cursive; }
-  .block__ledelicedespapilles p, .block__ledelicedespapilles h3 {
-    color: #0021db; }
+  background-color: #eceeee;
+  font-family: "Dancing Script", cursive;
+  color: #0021db; }
+  .block__ledelicedespapilles p {
+    font-family: "Itim", cursive, sans-serif;
+    font-style: italic; }
 
 .block__lapalettedugout {
-  background: white; }
-  .block__lapalettedugout--title {
-    font-family: "Kaushan Script", cursive, sans-serif; }
-  .block__lapalettedugout p, .block__lapalettedugout h3 {
-    color: #bfff80; }
+  background-color: white;
+  font-family: "Kaushan Script", cursive, sans-serif;
+  color: #bfff80; }
+  .block__lapalettedugout p {
+    font-family: "Itim", cursive, sans-serif;
+    font-style: italic; }
 
 .btn {
+  font-family: "Montserrat", sans-serif;
   background: #589d88;
   color: #fccb45;
   border: 1px #589d88;
-  font-size: 3rem;
-  margin: 2rem auto;
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 2rem auto 9rem auto;
   padding: 0.5rem 3rem;
   border-radius: 10px; }
 
 /* page - lanoteenchantee*/
-main section {
-  border: 1px solid #fce2de;
-  background: #fce2de;
-  margin: 1.2rem;
-  padding: 1.5rem; }
-
 .lanoteenchantee {
+  border: 1px solid #fce2de;
+  background-color: #fce2de;
+  font-family: "Itim", cursive, sans-serif;
+  font-size: 1.8rem;
+  margin: 1.2rem 1.2rem 8rem 1.2rem;
+  padding: 1.5rem;
   color: #3e131a; }
+  .lanoteenchantee span {
+    font-weight: bold; }
   .lanoteenchantee h3 {
-    font-family: "Devonshire", cursive, sans-serif; }
-
-.img {
-  width: 4rem;
-  height: auto; }
-  .img__deco {
+    font-family: "Devonshire", cursive, sans-serif;
+    font-size: 4rem; }
+  .lanoteenchantee .img {
     width: 30%;
     height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     margin: 0; }
-
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  .menu div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  ul span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-
-h5 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+    .lanoteenchantee .img__foot {
+      width: 2rem;
+      height: auto; }
 
 /* -----FOOTER-----*/
 footer {
   background-color: #589d88;
   color: #fccb45;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  width: 3rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  right: 0; }
 
 /* -------------------------------------------------*/
 /* _mobile.scss (des smartphones aux phablettes)    */

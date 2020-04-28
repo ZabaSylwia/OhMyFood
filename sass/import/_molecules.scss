@@ -6,94 +6,67 @@
 
 /* ----------------------------- */
 
-h1,
-.h1-like {
-    margin:auto;     
+h1{
+    margin: auto;     
     line-height: 1.3126;
-    font-weight: 500;
-    font-size: 4rem;
+    font-weight: 700;
+    font-size: 5rem;
+    color: $primary-color-text;
     /* à déterminer selon les variables COULEURS du fichier _atomes */
     font-family: $primary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
-h2,
-.h2-like {
-    margin: 0.75em 0 0 0;
-    font-size: 2em;
-    /* equiv 28px */
-    font-size: 4rem;
-    line-height: 1.5;
-    font-weight: 100;
-    /* à déterminer selon les variables COULEURS du fichier _atomes */
-    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
-}
-h3,
-.h3-like {
+
+h3{
     margin: auto;/* equiv 24px */
-    font-size: 4rem;
+    font-size: 3.3rem;
     line-height: 1.75;
     font-weight:100;
-     /* à déterminer selon les variables COULEURS du fichier _atomes */
-    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    margin-bottom: 1rem;
 }
-h4,
-.h4-like {
-    margin: 1.05em 0 0 0;
-    font-size: 1.4286em;
-    /* equiv 20px */
-    font-size: 2rem;
-    line-height: 1.05;
-    font-weight: 100;
-     /* à déterminer selon les variables COULEURS du fichier _atomes */
-    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
-}
-h5,
-.h5-like {
+
+h5{
     
-    font-size: 1.6rem;
+    font-size: 3rem;
     line-height: 1.1667;
     margin: 0;
     padding: 0;
+    flex: 1;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
      /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
-h6,
-.h6-like {
-    margin: 1.3125em 0 0 0;
-    font-size: 1.1429em;
-    /* equiv 16px */
-    font-size: 1.6rem;
-    line-height: 1.3125;
-     /* à déterminer selon les variables COULEURS du fichier _atomes */
-    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
-}
 
 a {
-    /* à déterminer selon les variables COULEURS du fichier _atomes */
-   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
     text-decoration: none;
     margin: auto;
+    &:visited{
+        color: inherit;
+    }
 }
 
 p {
     margin: auto;
-    font-size: 1.5em;
-     /* à déterminer selon les variables COULEURS du fichier _atomes */
-    /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
+    font-size: 4rem;
 }
 
 section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex;
 
 }
 
-.block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 1px 1px 5px grey;
+.menu{
+    @include flex;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
+ul{
+    @include flex;
+    span{
+        @include flex;
+    }
 }
 
 
@@ -101,11 +74,13 @@ section{
 
 /* -----BOUTONS-----*/
 @mixin button-general{
-    background: hsl(162, 28%, 48%);
-    color: hsl(44, 97%, 63%);
-    border: 1px hsl(162, 28%, 48%);
-    font-size: 3rem;
-    margin: 2rem auto;
+    font-family: $primary-typo;
+    background:$primary-color-background;
+    color: $primary-color-text;
+    border: 1px $primary-color-background;
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 2rem auto 9rem auto;
     padding: 0.5rem 3rem;
     border-radius: 10px;
 }
@@ -124,9 +99,16 @@ section{
     }
 }
 
-@mixin section-border ($color: $primary-color-background){
-    border: 1px solid $color;
-    background: $color;
-    margin: 1.2rem;
+
+
+@mixin section($number){
+    border: 1px solid map-get($bg-color, $number);
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($txt-typo, $number);
+    font-size: 1.8rem;
+    margin: 1.2rem 1.2rem 8rem 1.2rem;
     padding: 1.5rem;
+    span{
+        font-weight: bold;
+    }
 }
