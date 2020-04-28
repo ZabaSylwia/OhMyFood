@@ -26,7 +26,7 @@ h3{
 
 h5{
     
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.1667;
     margin: 0;
     padding: 0;
@@ -45,11 +45,12 @@ a {
 
 p {
     margin: auto;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 section{
     @include flex;
+    padding: 0;
 }
 
 ul{
@@ -101,4 +102,8 @@ ul{
     span{
         font-weight: bold;
     }
+}
+
+@mixin txt-color-chic($number){
+    color: map-get($txt-color-chic, $number);
 }

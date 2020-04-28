@@ -181,7 +181,7 @@ h3 {
   margin-bottom: 1rem; }
 
 h5 {
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.1667;
   margin: 0;
   padding: 0;
@@ -199,7 +199,7 @@ a {
 
 p {
   margin: auto;
-  font-size: 4rem; }
+  font-size: 3rem; }
 
 section {
   display: -webkit-box;
@@ -214,7 +214,8 @@ section {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  padding: 0; }
 
 ul {
   display: -webkit-box;
@@ -395,9 +396,17 @@ img:not([alt]) {
   color: #c57411; }
   .lechicalafrancaise span {
     font-weight: bold; }
+  .lechicalafrancaise .menu__1 {
+    color: #c57411; }
+  .lechicalafrancaise .menu__2 {
+    color: #a56999; }
+  .lechicalafrancaise .menu__3 {
+    color: #6e4ccd; }
+  .lechicalafrancaise li {
+    font-weight: lighter; }
   .lechicalafrancaise h3 {
     font-family: "Kurale", cursive, sans-serif;
-    font-size: 4rem; }
+    font-size: 3.5rem; }
   .lechicalafrancaise .img {
     width: 30%;
     height: auto;
