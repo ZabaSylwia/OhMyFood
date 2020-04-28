@@ -216,28 +216,6 @@ section {
       -ms-flex-align: center;
           align-items: center; }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .menu div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -362,6 +340,28 @@ img:not([alt]) {
   border-radius: 10px; }
 
 /* page - lanoteenchantee*/
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .menu div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
 .lanoteenchantee {
   border: 1px solid #fce2de;
   background-color: #fce2de;
@@ -385,6 +385,26 @@ img:not([alt]) {
       width: 2rem;
       height: auto; }
 
+.lechicalafrancaise {
+  border: 1px solid #f8ddf6;
+  background-color: #f8ddf6;
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 1.8rem;
+  margin: 1.2rem 1.2rem 8rem 1.2rem;
+  padding: 1.5rem;
+  color: #c57411; }
+  .lechicalafrancaise span {
+    font-weight: bold; }
+  .lechicalafrancaise h3 {
+    font-family: "Kurale", cursive, sans-serif;
+    font-size: 4rem; }
+  .lechicalafrancaise .img {
+    width: 30%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 0; }
+
 /* -----FOOTER-----*/
 footer {
   background-color: #589d88;
@@ -395,6 +415,8 @@ footer {
   width: 100%;
   bottom: 0;
   right: 0; }
+  footer a {
+    color: inherit; }
 
 /* -------------------------------------------------*/
 /* _mobile.scss (des smartphones aux phablettes)    */

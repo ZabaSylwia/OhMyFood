@@ -91,6 +91,15 @@ img:not([alt]) {
 
 /* page - lanoteenchantee*/
 
+.menu{
+    @include flex;
+    div{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
+
 
 .lanoteenchantee{
     @include section(1);
@@ -112,6 +121,21 @@ img:not([alt]) {
     
 }
 
+.lechicalafrancaise{
+    @include section(2);
+    color: $lechicalafrancaise__text--1;
+    h3{
+    font-family: $lechicalafrancaise__typo;
+    font-size: 4rem;
+    }
+    .img{
+        width: 30%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+    }
+}
+
 
 
 
@@ -126,5 +150,8 @@ footer{
     width: 100%;
     bottom: 0;
     right: 0;
+    a{
+        color: inherit;
+    }
 
 }
