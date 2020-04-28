@@ -7,12 +7,10 @@
 /* ----------------------------- */
 /* switching box model for all elements */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 * {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit; }
+  box-sizing: inherit; }
 
 body {
   overflow-x: hidden; }
@@ -109,8 +107,8 @@ samp {
   /* passage à la ligne forcé */
   -webkit-hyphens: auto;
   /* césure propre */
-  -ms-hyphens: auto;
-      hyphens: auto; }
+  -moz-hyphens: auto;
+  hyphens: auto; }
 
 code,
 pre,
@@ -125,6 +123,12 @@ ul {
 a {
   font-weight: 100; }
 
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
 @-ms-viewport {
   width: device-width;
   zoom: 1.0; }
@@ -229,33 +233,16 @@ p {
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey; }
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 1px 1px 5px grey; }
 
 /* -----BOUTONS-----*/
 /* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: a {@include button-general} */
@@ -266,9 +253,6 @@ section {
 /* -------------------------------------------------*/
 /* _commun.scss (styles communs a tous les peripheriques et toutes les pages. Ce qui vient en supplément des éléments génériques classiques comme les titres/boutons/liens/espaces qu'on retrouvera sur les fichiers atomes et molécules) */
 /* -----GENERAL-----*/
-::-moz-selection {
-  background: #000000;
-  /* Webkit */ }
 ::selection {
   background: #000000;
   /* Webkit */ }
@@ -353,46 +337,25 @@ main section {
   .img__deco {
     width: 30%;
     height: auto;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     margin: 0; }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  flex-direction: column; }
   .menu div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    justify-content: space-between; }
 
 ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  flex-direction: column; }
   ul span {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    justify-content: center; }
 
 h5 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
+  flex: 1; }
 
 /* -----FOOTER-----*/
 footer {
@@ -421,13 +384,8 @@ body:before {
   height: 4rem; }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1rem 0; }
 
 /* @media query optionnelle (max-width: 640px)*/
