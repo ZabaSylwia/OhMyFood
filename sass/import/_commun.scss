@@ -54,7 +54,10 @@ img:not([alt]) {
     background: $lanoteenchantee__background;
     color: $lanoteenchantee__text;
     &--title{
-        font-style: $lanoteenchantee__typo;
+        font-family: $lanoteenchantee__typo;
+    }
+    &--text{
+        font-family: $lechicalafrancaise__typo--secondary;
     }
 }
 

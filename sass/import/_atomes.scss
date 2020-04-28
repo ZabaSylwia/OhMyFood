@@ -37,18 +37,19 @@ $lapalettedugout__text--0-5: hsl(101, 51%, 58%); /*transition color*/
 
 
 /* -----TYPOGRAPHIE-----*/
-$primary-typo: 'Montserrat', sans-serif;
-$secondary-typo: verdana,sans-serif;
+$primary-typo: "Montserrat", sans-serif;
 
-$lanoteenchantee__typo: 'Devonshire', cursive;
+$lanoteenchantee__typo: "Devonshire", cursive, sans-serif;
+$lanoteenchantee__typo--secondary: "Itim", cursive, sans-serif;
 
-$lechicalafrancaise__typo: 'Croissant One', cursive, sans-serif;
-$lechicalafrancaise__typo--secondary: "Courier New", sans-serif;
+$lechicalafrancaise__typo: "Kurale", cursive, sans-serif;
+$lechicalafrancaise__typo--secondary: "Abril Fatface", sans-serif;;
 
-$ledelicedespapilles__typo: 'Dancing Script', cursive; 
-$ledelicedespapilles__typo--secondary: "Comic Sans MS", sans-serif;
+$ledelicedespapilles__typo: "Dancing Script", cursive; 
+$ledelicedespapilles__typo--secondary: "Chilanka", sans-serif;
 
-$lapalettedugout__typo: 'Kaushan Script', cursive, sans-serif;
+$lapalettedugout__typo: "Kaushan Script", cursive, sans-serif;
+$lapalettedugout__typo--secondary: "Chilanka", sans-serif;
 
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 $marge-int-gauche-md: 0rem;
