@@ -13,7 +13,28 @@
     }
 
     /* -----ACCUEIL-----*/
+    .main-page{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        article{
+            margin: 2rem;
+            width: 40%;
+            height: 50vh;
+        }
+    }
+    
 
+    footer{
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        a{
+            margin: 0 10px;
+
+        }
+        
+        
+    }
 
 }
 /* Fin de @media (min-width: 40.063em)/* = min-width 641px */

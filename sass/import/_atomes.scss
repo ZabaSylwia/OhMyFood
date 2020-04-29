@@ -1,17 +1,8 @@
 @charset "UTF-8";
-
-/* ----------------------------------------------------------------------------------    */
-
-/* _atomes.scss  (matière première : couleurs/typographie/espaces)         	             */
-
-/* ----------------------------------------------------------------------------------    */
-
-
-
 /* -----COULEURS-----*/
 $primary-color-text: hsl(44, 97%, 63%) ;
 $primary-color-background:  hsl(162, 28%, 48%);
-$primary-color-dark: red;
+$primary-color-dark: rgb(66, 66, 66);
 $secondary-color: hsl(0, 0%, 100%);
 
 $lanoteenchantee__background: hsl(7, 85%, 93%);
@@ -21,9 +12,6 @@ $lechicalafrancaise__background: hsl(306, 67%, 92%);
 $lechicalafrancaise__text--1: hsl(33, 84%, 42%);
 $lechicalafrancaise__text--2: hsl(312, 25%, 53%);
 $lechicalafrancaise__text--3: hsl(256, 56%, 55%);
-/*Gradient text:
-- orange: hsl(34, 84%, 48%)
-- blue : hsl(259, 99%, 68%)*/
 
 $ledelicedespapilles__backrgound: hsl(180, 6%, 93%);
 $ledelicedespapilles__text--1: hsl(231, 100%, 43%); /*navy*/
@@ -42,15 +30,24 @@ $primary-typo: "Montserrat", sans-serif;
 
 $lanoteenchantee__typo: "Devonshire", cursive, sans-serif;
 $lanoteenchantee__typo--secondary: "Itim", cursive, sans-serif;
+$lanoteenchantee__typo--tertiary: "Kalam", sans-serif;
 
 $lechicalafrancaise__typo: "Kurale", cursive, sans-serif;
-$lechicalafrancaise__typo--secondary: "Abril Fatface", sans-serif;;
+$lechicalafrancaise__typo--secondary: "Abril Fatface", sans-serif;
+$lechicalafrancaise__typo--tertiary: "Crimson Text", sans-serif;
 
 $ledelicedespapilles__typo: "Dancing Script", cursive; 
 $ledelicedespapilles__typo--secondary: "Chilanka", sans-serif;
+$ledelicedespapilles__typo--tertiary: "Caveat", sans-serif;
 
 $lapalettedugout__typo: "Kaushan Script", cursive, sans-serif;
 $lapalettedugout__typo--secondary: "Chilanka", sans-serif;
+
+/*Variables d'animation*/
+$shake-intensity: 10%;
+$num-dot: 3;
+$anim-dur: 900ms;
+$anim-delay: $anim-dur/$num-dot;
 
 /*---MAPS---*/
 
@@ -73,17 +70,19 @@ $title-typo:(
     4: $lapalettedugout__typo
 );
 
-$txt-typo:(
+$menu-typo:(
     1: $lanoteenchantee__typo--secondary,
     2: $lechicalafrancaise__typo--secondary,
     3: $ledelicedespapilles__typo--secondary,
     4: $lapalettedugout__typo--secondary
 );
 
-@mixin menu($number){
-    background-color: map-get($bg-color, $number);
-    font-family: map-get($title-typo, $number );
-}
+$txt-typo: (
+    1: $lanoteenchantee__typo--tertiary,
+    2: $lechicalafrancaise__typo--tertiary,
+    3: $ledelicedespapilles__typo--tertiary
+);
+
 
 
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
@@ -122,8 +121,32 @@ $marge-int-bas-sm: 0rem;
 
 @mixin flex {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-/* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: div {@include marges-int-horizontales-md} */
+
+@mixin primary-setting {
+    background-color: $primary-color-background;
+    color: $primary-color-text;
+    font-family: $primary-typo;
+}
+
+@mixin menu($number){
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($title-typo, $number );
+}
+
+@mixin menu-section($number){
+    border: 1px solid map-get($bg-color, $number);
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($txt-typo, $number);
+    font-size: 1.8rem;
+    margin: 1.2rem 1.2rem 8rem 1.2rem;
+    padding: 1.5rem;
+    span{
+        font-weight: bold;
+    }
+}
+
+@mixin txt-color-chic($number){
+    color: map-get($txt-color-chic, $number);
+}
+

@@ -140,13 +140,7 @@ a {
 @viewport {
   width: device-width;
   zoom: 1.0; }
-/* ----------------------------------------------------------------------------------    */
-/* _atomes.scss  (matière première : couleurs/typographie/espaces)         	             */
-/* ----------------------------------------------------------------------------------    */
 /* -----COULEURS-----*/
-/*Gradient text:
-- orange: hsl(34, 84%, 48%)
-- blue : hsl(259, 99%, 68%)*/
 /*navy*/
 /*navy*/
 /*artic*/
@@ -155,10 +149,10 @@ a {
 /* lime bright*/
 /*transition color*/
 /* -----TYPOGRAPHIE-----*/
+/*Variables d'animation*/
 /*---MAPS---*/
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 /* -----ESPACES MOBILES ET TABLETTES-----*/
-/* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: div {@include marges-int-horizontales-md} */
 /* ----------------------------- */
 /* _molecules.scss (éléments génériques comme les titres/boutons/liens/paragraphes qu'on retrouvera sur le fichier molécules) */
 /* ----------------------------- */
@@ -166,11 +160,7 @@ h1 {
   margin: auto;
   line-height: 1.3126;
   font-weight: 700;
-  font-size: 5rem;
-  color: #fccb45;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  font-family: "Montserrat", sans-serif;
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
+  font-size: 5rem; }
 
 h3 {
   margin: auto;
@@ -201,57 +191,22 @@ p {
   margin: auto;
   font-size: 3rem; }
 
-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0; }
-
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  ul span {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
 /* -----BOUTONS-----*/
-/* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: a {@include button-general} */
-/* Appliquer le hover quand l'appareil le permet */
-@media (hover: hover) {
-  .button:hover {
-    /* hover styles */ } }
+/*keyframes*/
+@-webkit-keyframes wiggle {
+  25% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%); }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%); } }
+@keyframes wiggle {
+  25% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%); }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%); } }
 /* -------------------------------------------------*/
 /* _commun.scss (styles communs a tous les peripheriques et toutes les pages. Ce qui vient en supplément des éléments génériques classiques comme les titres/boutons/liens/espaces qu'on retrouvera sur les fichiers atomes et molécules) */
 /* -----GENERAL-----*/
@@ -279,11 +234,18 @@ img:not([alt]) {
 
 /* -----HEADER-----*/
 .header {
-  background: #589d88;
+  background-color: #589d88;
+  color: #fccb45;
+  font-family: "Montserrat", sans-serif;
   padding: 5%; }
 
 /* -----CONTENT-----*/
 /*Page d'accueil*/
+.main-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,7 +258,38 @@ img:not([alt]) {
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey; }
+          box-shadow: 1px 1px 5px grey;
+  opacity: 1;
+  -webkit-transition: opacity 400ms;
+  transition: opacity 400ms; }
+  .block:hover {
+    opacity: 0.7; }
+  .block a {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform 400ms;
+    transition: -webkit-transform 400ms;
+    transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms; }
+    .block a:hover {
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15); }
+
+.menu-page h5:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1); }
+.menu-page h5::after {
+  content: "";
+  border-bottom: solid 3px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%; }
 
 .block__lanoteenchantee {
   background-color: #fce2de;
@@ -330,9 +323,9 @@ img:not([alt]) {
     font-style: italic; }
 
 .btn {
-  font-family: "Montserrat", sans-serif;
-  background: #589d88;
+  background-color: #589d88;
   color: #fccb45;
+  font-family: "Montserrat", sans-serif;
   border: 1px #589d88;
   font-size: 2rem;
   font-weight: lighter;
@@ -341,32 +334,10 @@ img:not([alt]) {
   border-radius: 10px; }
 
 /* page - lanoteenchantee*/
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .menu div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-
 .lanoteenchantee {
   border: 1px solid #fce2de;
   background-color: #fce2de;
-  font-family: "Itim", cursive, sans-serif;
+  font-family: "Kalam", sans-serif;
   font-size: 1.8rem;
   margin: 1.2rem 1.2rem 8rem 1.2rem;
   padding: 1.5rem;
@@ -389,7 +360,7 @@ img:not([alt]) {
 .lechicalafrancaise {
   border: 1px solid #f8ddf6;
   background-color: #f8ddf6;
-  font-family: "Abril Fatface", sans-serif;
+  font-family: "Crimson Text", sans-serif;
   font-size: 1.8rem;
   margin: 1.2rem 1.2rem 8rem 1.2rem;
   padding: 1.5rem;
@@ -402,8 +373,6 @@ img:not([alt]) {
     color: #a56999; }
   .lechicalafrancaise .menu__3 {
     color: #6e4ccd; }
-  .lechicalafrancaise li {
-    font-weight: lighter; }
   .lechicalafrancaise h3 {
     font-family: "Kurale", cursive, sans-serif;
     font-size: 3.5rem; }
@@ -414,8 +383,52 @@ img:not([alt]) {
        object-fit: contain;
     margin: 0; }
 
+.lapalettedugout {
+  border: 1px solid white;
+  background-color: white;
+  font-size: 1.8rem;
+  margin: 1.2rem 1.2rem 8rem 1.2rem;
+  padding: 1.5rem;
+  color: #424242; }
+  .lapalettedugout span {
+    font-weight: bold; }
+  .lapalettedugout h3 {
+    font-family: "Kaushan Script", cursive, sans-serif;
+    font-size: 4rem;
+    color: #3d923a; }
+  .lapalettedugout .img {
+    width: 30%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 0; }
+
+.ledelicedepapilles {
+  border: 1px solid #eceeee;
+  background-color: #eceeee;
+  font-family: "Caveat", sans-serif;
+  font-size: 1.8rem;
+  margin: 1.2rem 1.2rem 8rem 1.2rem;
+  padding: 1.5rem;
+  color: #424242; }
+  .ledelicedepapilles span {
+    font-weight: bold; }
+  .ledelicedepapilles h3 {
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    color: #0021db; }
+  .ledelicedepapilles .img {
+    width: 30%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin: 0; }
+
 /* -----FOOTER-----*/
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #589d88;
   color: #fccb45;
   font-family: "Montserrat", sans-serif;
@@ -426,62 +439,205 @@ footer {
   right: 0; }
   footer a {
     color: inherit; }
+    footer a:hover {
+      -webkit-animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+              animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3; }
+
+.legals a,
+.contact a {
+  height: 100%; }
+  .legals a:hover,
+  .contact a:hover {
+    -webkit-animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+            animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3; }
 
 /* -------------------------------------------------*/
 /* _mobile.scss (des smartphones aux phablettes)    */
 /* -------------------------------------------------*/
-body:before {
-  color: red;
-  width: 100%;
-  display: block;
-  text-align: center;
-  content: "Version mobile"; }
-
-/* -----ACCUEIL-----*/
-.block {
-  width: 90%;
-  height: 30rem;
-  margin: 1rem; }
-
-.block img {
-  width: 4rem;
-  height: 4rem; }
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 1rem 0; }
-
 /* @media query optionnelle (max-width: 640px)*/
+@media (max-width: 640px) {
+  body:before {
+    color: #424242;
+    width: 100%;
+    display: block;
+    text-align: center;
+    content: "Version mobile"; }
+
+  /* -----ACCUEIL-----*/
+  .main-page {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+  .block {
+    width: 90%;
+    height: 30rem;
+    margin: 1rem; }
+    .block img {
+      width: 4rem;
+      height: 4rem; }
+
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .menu div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .menu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .menu ul li {
+        margin: 1rem; }
+      .menu ul span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 0; } }
 /* Fin de @media query optionnelle (max-width: 640px)*/
 /* ----------------------------------------------------------------- */
 /* _tablet.scss (des tablettes aux ordinateurs portables/laptops)    */
 /* ----------------------------------------------------------------- */
 @media (min-width: 40.063em) {
   body:before {
-    color: red;
+    color: #424242;
     width: 100%;
     display: block;
     text-align: center;
     content: "Version tablette"; }
 
-  /* -----ACCUEIL-----*/ }
+  /* -----ACCUEIL-----*/
+  .main-page {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .main-page article {
+      margin: 2rem;
+      width: 40%;
+      height: 50vh; }
+
+  footer {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 4rem; }
+    footer a {
+      margin: 0 10px; } }
 /* Fin de @media (min-width: 40.063em)/* = min-width 641px */
 /* -------------------------------- */
 /* _desktop.scss (grands écrans)    */
 /* -------------------------------- */
 @media (min-width: 64.063em) {
   body:before {
-    color: red;
+    color: #424242;
     width: 100%;
     display: block;
     text-align: center;
     content: "Version Ordinateur"; }
+
+  h1 {
+    font-size: 7rem; }
+
+  .main-page {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .main-page article {
+      margin: 2rem;
+      width: 35%;
+      height: 70vh; }
+    .main-page .btn {
+      font-size: 3rem; }
+
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .menu .img__logo {
+      width: 50%; }
+    .menu div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .menu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .menu ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        margin: 0 2rem;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+
+  footer {
+    height: 6rem;
+    font-size: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
 
   /* -----ACCUEIL-----*/ }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */

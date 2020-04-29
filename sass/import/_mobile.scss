@@ -5,31 +5,61 @@
 /* _mobile.scss (des smartphones aux phablettes)    */
 
 /* -------------------------------------------------*/
-body:before {
-    @include bandeau-resolution;
-    content: "Version mobile";   
-}
 
-/* -----ACCUEIL-----*/   
-.block{
-    width: 90%;
-    height: 30rem;
-    margin: 1rem;
-}
-
-.block img{
-    width: 4rem;
-    height: 4rem;
-}
-
-
-footer{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-}
 
 /* @media query optionnelle (max-width: 640px)*/
 @media (max-width: 640px) {
+    body:before {
+        @include bandeau-resolution;
+        content: "Version mobile";   
+    }
+    
+    /* -----ACCUEIL-----*/   
 
+    .main-page{
+        padding: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .block{
+        width: 90%;
+        height: 30rem;
+        margin: 1rem;   
+        img{
+            width: 4rem;
+            height: 4rem;
+        }     
+    }
+
+    .menu{
+        @include flex;
+        flex-direction: column;
+        div{
+            @include flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+        ul{
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                margin: 1rem;
+            }
+            span{
+                @include flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+    }
+    
+    footer{
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    
 } /* Fin de @media query optionnelle (max-width: 640px)*/

@@ -9,10 +9,58 @@
 @media (min-width: 64.063em) {
     body:before {
         @include bandeau-resolution;
-        content: "Version Ordinateur";   
+        content: "Version Ordinateur"; 
+    }   
+
+    h1{
+        font-size: 7rem;
     }
+    .main-page{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        article{
+            margin: 2rem;
+            width: 35%;
+            height: 70vh;
+        }
+        .btn{
+            font-size: 3rem;
+        }
+    }  
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        .img__logo{
+            width: 50%;
+        }
+        div{
+            @include flex;
+            flex-direction: row;
+        }
+        ul{
+            display:flex;
+            justify-content: space-between;
+            li{
+                display: flex;
+                align-items: stretch;
+                margin: 0 2rem;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    footer{
+        height: 6rem;
+        font-size: 3rem;
+        align-items: center;
+    }
+    
 
     /* -----ACCUEIL-----*/
 
 }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */
+
+
+

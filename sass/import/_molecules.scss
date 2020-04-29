@@ -11,9 +11,6 @@ h1{
     line-height: 1.3126;
     font-weight: 700;
     font-size: 5rem;
-    color: $primary-color-text;
-    /* à déterminer selon les variables COULEURS du fichier _atomes */
-    font-family: $primary-typo; /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
 
 h3{
@@ -47,27 +44,9 @@ p {
     margin: auto;
     font-size: 3rem;
 }
-
-section{
-    @include flex;
-    padding: 0;
-}
-
-ul{
-    @include flex;
-    span{
-        @include flex;
-    }
-}
-
-
-
-
 /* -----BOUTONS-----*/
 @mixin button-general{
-    font-family: $primary-typo;
-    background:$primary-color-background;
-    color: $primary-color-text;
+    @include primary-setting;
     border: 1px $primary-color-background;
     font-size: 2rem;
     font-weight: lighter;
@@ -76,34 +55,13 @@ ul{
     border-radius: 10px;
 }
 
-@mixin button-general-hover {
-}
+/*keyframes*/
 
-/* Ne pas oublier d'appeler la mixin dans les autres fichiers avec @include. exemple: a {@include button-general} */
-
-
-/* Appliquer le hover quand l'appareil le permet */
-@media (hover: hover) {
-.button:hover {
-  /* hover styles */
-    @include button-general-hover {}
+@keyframes wiggle {
+    25% {
+        transform: translateX($shake-intensity);
     }
-}
-
-
-
-@mixin section($number){
-    border: 1px solid map-get($bg-color, $number);
-    background-color: map-get($bg-color, $number);
-    font-family: map-get($txt-typo, $number);
-    font-size: 1.8rem;
-    margin: 1.2rem 1.2rem 8rem 1.2rem;
-    padding: 1.5rem;
-    span{
-        font-weight: bold;
+    75% {
+      transform: translateX($shake-intensity * -1);
     }
-}
-
-@mixin txt-color-chic($number){
-    color: map-get($txt-color-chic, $number);
 }
