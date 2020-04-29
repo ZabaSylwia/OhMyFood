@@ -57,9 +57,11 @@ img:not([alt]) {
             opacity: 0.7;
         }
     a{
+        color: inherit;
         transform: scale(1);
         transition: transform 400ms;
         &:hover {
+            color: inherit;
             transform: scale(1.15);
         }
     }
@@ -67,6 +69,8 @@ img:not([alt]) {
 }
 .menu-page{
     h5{
+        margin: 0;
+        padding: 0;
         &:hover {
             &::after {
                 transform: scaleX(1);
@@ -74,7 +78,7 @@ img:not([alt]) {
         }
             &::after {
             content: "";
-            border-bottom: solid 3px;
+            border-top: solid 3px;
             height: 100%;
             width: 100%;
             display: block;

@@ -8,7 +8,7 @@
 /* switching box model for all elements */
 html {
   -webkit-box-sizing: border-box;
-        box-sizing: border-box; }
+          box-sizing: border-box; }
 
 * {
   -webkit-box-sizing: inherit;
@@ -176,15 +176,13 @@ h5 {
   line-height: 1.1667;
   margin: 0;
   padding: 0;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   /* à déterminer selon les variables COULEURS du fichier _atomes */
   /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
 
 a {
   text-decoration: none;
-  margin: auto; }
+  margin: auto;
+  color: inherit; }
   a:visited {
     color: inherit; }
 
@@ -194,6 +192,20 @@ p {
 
 /* -----BOUTONS-----*/
 /*keyframes*/
+@-webkit-keyframes wiggle {
+  25% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%); }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%); } }
+@keyframes wiggle {
+  25% {
+    -webkit-transform: translateX(10%);
+            transform: translateX(10%); }
+  75% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%); } }
 /* -------------------------------------------------*/
 /* _commun.scss (styles communs a tous les peripheriques et toutes les pages. Ce qui vient en supplément des éléments génériques classiques comme les titres/boutons/liens/espaces qu'on retrouvera sur les fichiers atomes et molécules) */
 /* -----GENERAL-----*/
@@ -252,6 +264,7 @@ img:not([alt]) {
   .block:hover {
     opacity: 0.7; }
   .block a {
+    color: inherit;
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transition: -webkit-transform 400ms;
@@ -259,24 +272,28 @@ img:not([alt]) {
     transition: transform 400ms;
     transition: transform 400ms, -webkit-transform 400ms; }
     .block a:hover {
+      color: inherit;
       -webkit-transform: scale(1.15);
               transform: scale(1.15); }
 
-.menu-page h5:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1); }
-.menu-page h5::after {
-  content: "";
-  border-bottom: solid 3px;
-  height: 100%;
-  width: 100%;
-  display: block;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%; }
+.menu-page h5 {
+  margin: 0;
+  padding: 0; }
+  .menu-page h5:hover::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
+  .menu-page h5::after {
+    content: "";
+    border-top: solid 3px;
+    height: 100%;
+    width: 100%;
+    display: block;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%; }
 
 .block__lanoteenchantee {
   background-color: #fce2de;
@@ -545,10 +562,42 @@ footer {
       width: 40%;
       height: 50vh; }
 
-  .menu-page div {
+  .menu-page header h3 {
+    font-size: 7rem; }
+
+  .menu {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .menu div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .menu div h5 {
+        font-size: 3.5rem; }
+    .menu ul {
+      font-size: 2.2rem; }
+      .menu ul li {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+
+  .lanoteenchantee header .img__logo {
+    width: 7rem; }
 
   footer {
     -webkit-box-pack: justify;
@@ -587,6 +636,9 @@ footer {
     .main-page .btn {
       font-size: 3rem; }
 
+  .menu-page header h3 {
+    font-size: 10rem; }
+
   .menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -595,8 +647,6 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
-    .menu .img__logo {
-      width: 50%; }
     .menu div {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -604,29 +654,24 @@ footer {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; }
-    .menu ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
+              flex-direction: row;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between; }
+      .menu div h5 {
+        font-size: 4rem; }
+    .menu ul {
+      font-size: 2.5rem; }
       .menu ul li {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-                align-items: stretch;
-        margin: 0 2rem;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+
+  .lanoteenchantee header .img__logo {
+    width: 8rem; }
 
   footer {
     height: 6rem;

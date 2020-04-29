@@ -27,7 +27,6 @@ h5{
     line-height: 1.1667;
     margin: 0;
     padding: 0;
-    flex: 1;
      /* à déterminer selon les variables COULEURS du fichier _atomes */
      /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */
 }
@@ -35,6 +34,7 @@ h5{
 a {
     text-decoration: none;
     margin: auto;
+    color: inherit;
     &:visited{
         color: inherit;
     }
@@ -57,3 +57,11 @@ p {
 
 /*keyframes*/
 
+@keyframes wiggle {
+    25% {
+        transform: translateX($shake-intensity);
+    }
+    75% {
+      transform: translateX($shake-intensity * -1);
+    }
+}
