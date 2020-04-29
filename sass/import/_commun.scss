@@ -35,59 +35,87 @@ img:not([alt]) {
 /* -----HEADER-----*/
 
 .header{
-    background: $primary-color-background;
-    color: $primary-color-text;     
+    @include primary-setting;  
     padding: 5%;  
 }
 
 /* -----CONTENT-----*/
 
 /*Page d'accueil*/
-
-.block{
-    a:visited{
-        color: inherit;
-    }
+.main-page{
+    @include flex;
 }
 
-.block__lanoteenchantee{
-    background: $lanoteenchantee__background;
-    color: $lanoteenchantee__text;
-    &--title{
-        font-family: $lanoteenchantee__typo;
+.block{
+    @include flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 5px grey;
+    opacity: 1;
+    transition: opacity 400ms;
+        &:hover {
+            opacity: 0.7;
+        }
+    a{
+        transform: scale(1);
+        transition: transform 400ms;
+        &:hover {
+            transform: scale(1.15);
+        }
     }
-    &--text{
-        font-family: $lechicalafrancaise__typo--secondary;
+    
+}
+.menu-page{
+    h5{
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+            &::after {
+            content: "";
+            border-bottom: solid 3px;
+            height: 100%;
+            width: 100%;
+            display: block;
+            transform: scaleX(0);
+            transition: 1s;
+            transform-origin: 0% 50%;
+        }
+    }
+}
+.block__lanoteenchantee{
+    @include menu(1);
+    color: $lanoteenchantee__text;
+    p{
+        font-family: map-get($menu-typo, 1);
+        font-style: italic;
     }
 }
 
 .block__lechicalafrancaise{
-    background: $lechicalafrancaise__background;
-    &--title{
-        font-family: $lechicalafrancaise__typo;
-    }
-    p, h3{
-        color: $lechicalafrancaise__text--1;
+    @include menu(2);
+    color: $lechicalafrancaise__text--1;
+    p{
+        font-family: map-get($menu-typo, 2);
     }
 }
 
 .block__ledelicedespapilles{
-    background: $ledelicedespapilles__backrgound;
-    &--title{
-        font-family: $ledelicedespapilles__typo;
-    }
-    p, h3{
-        color: $ledelicedespapilles__text--1;
+    @include menu(3);
+    color: $ledelicedespapilles__text--1;
+    p{
+        font-family: map-get($menu-typo, 1);
+        font-style: italic;
     }
 }
 
 .block__lapalettedugout{
-    background: $lapalettedugout__background;
-    &--title{
-        font-family: $lapalettedugout__typo;
-    }
-    p, h3{
-        color: $lapalettedugout__text--2;
+    @include menu(4);
+    color: $lapalettedugout__text--2;
+    p{
+        font-family: map-get($menu-typo, 1);
+        font-style: italic;
     }
 }
 
@@ -97,21 +125,48 @@ img:not([alt]) {
 
 /* page - lanoteenchantee*/
 
-main section{
-    @include section-border($lanoteenchantee__background);
-}
+
+
 
 .lanoteenchantee{
+    @include menu-section(1);
     color: $lanoteenchantee__text;
     h3{
     font-family: $lanoteenchantee__typo;
+    font-size: 4rem;
     }
+    .img{
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+        &__foot{
+            width: 2rem;
+            height: auto;
+        }
+    }
+    
 }
 
-.img{
-    width: 4rem;
-    height: auto;
-    &__deco{
+.lechicalafrancaise{
+    @include menu-section(2);
+    color: $lechicalafrancaise__text--1;
+    .menu{
+        &__1{
+            @include txt-color-chic(1);
+        }
+        &__2{
+            @include txt-color-chic(2);
+        }
+        &__3{
+            @include txt-color-chic(3);
+        }
+    }
+    h3{
+    font-family: $lechicalafrancaise__typo;
+    font-size: 3.5rem;
+    }
+    .img{
         width: 30%;
         height: auto;
         object-fit: contain;
@@ -119,35 +174,67 @@ main section{
     }
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    div{
-        display: flex;
-        justify-content: space-between;
+.lapalettedugout{
+    @include menu-section(4);
+    color: $primary-color-dark;
+    h3{
+    font-family: $lapalettedugout__typo;
+    font-size: 4rem;
+    color: $lapalettedugout__text--1;
     }
-    
+    .img{
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    }  
 }
 
-ul{
-    display: flex;
-    flex-direction: column;
-    span{
-        display: flex;
-        justify-content: center;
+.ledelicedepapilles{
+    @include menu-section(3);
+    color: $primary-color-dark;
+    h3{
+    font-family: map-get($title-typo, 3);
+    font-size: 4rem;
+    color: $ledelicedespapilles__text--1;
     }
+    .img{
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    }  
 }
 
-h5{
-    flex: 1;
-}
 
 
 
 /* -----FOOTER-----*/
 
 footer{
-    background-color: $primary-color-background;
-    color: $primary-color-text;
-    font-family: $primary-typo;
+    @include flex;
+    @include primary-setting;
+    width: 3rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    a{
+        color: inherit;
+        &:hover {
+            animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3; //Nom de la Keyframe, durée, timing,itération
+        }
+    }
+
 }
+
+.legals,
+.contact {
+    a {
+    height: 100%;
+    &:hover {
+        animation: wiggle 250ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3; //Nom de la Keyframe, durée, timing,itération
+    }
+    }
+}
+
