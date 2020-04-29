@@ -23,7 +23,11 @@
         }
     }
     
-
+    .menu-page{
+        div{
+            display: flex;
+        }
+    }
     footer{
         justify-content: space-between;
         align-items: center;

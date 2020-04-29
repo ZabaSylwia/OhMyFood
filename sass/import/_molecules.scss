@@ -57,11 +57,3 @@ p {
 
 /*keyframes*/
 
-@keyframes wiggle {
-    25% {
-        transform: translateX($shake-intensity);
-    }
-    75% {
-      transform: translateX($shake-intensity * -1);
-    }
-}
