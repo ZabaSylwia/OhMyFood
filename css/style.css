@@ -148,10 +148,10 @@ a {
 /*emerald color*/
 /* lime bright*/
 /*transition color*/
-/*maps*/
 /* -----TYPOGRAPHIE-----*/
 /*Variables d'animation*/
 /*---MAPS---*/
+/*maps*/
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 /* -----ESPACES MOBILES ET TABLETTES-----*/
 /* ----------------------------- */
@@ -167,7 +167,6 @@ h3 {
   margin: auto;
   /* equiv 24px */
   font-size: 3.3rem;
-  line-height: 1.75;
   font-weight: 100;
   margin-bottom: 1rem; }
 
@@ -338,13 +337,24 @@ img:not([alt]) {
   border-radius: 10px; }
 
 /* page - lanoteenchantee*/
+.menu div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
 .lanoteenchantee {
   border: 1px solid #fce2de;
   background-color: #fce2de;
   font-family: "Kalam", sans-serif;
-  font-size: 1.8rem;
-  margin: 1.2rem 1.2rem 8rem 1.2rem;
-  padding: 1.5rem;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   color: #3e131a; }
   .lanoteenchantee span {
     font-weight: bold; }
@@ -365,9 +375,8 @@ img:not([alt]) {
   border: 1px solid #f8ddf6;
   background-color: #f8ddf6;
   font-family: "Crimson Text", sans-serif;
-  font-size: 1.8rem;
-  margin: 1.2rem 1.2rem 8rem 1.2rem;
-  padding: 1.5rem;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   color: #c57411; }
   .lechicalafrancaise span {
     font-weight: bold; }
@@ -390,9 +399,8 @@ img:not([alt]) {
 .lapalettedugout {
   border: 1px solid white;
   background-color: white;
-  font-size: 1.8rem;
-  margin: 1.2rem 1.2rem 8rem 1.2rem;
-  padding: 1.5rem;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   color: #424242; }
   .lapalettedugout span {
     font-weight: bold; }
@@ -411,9 +419,8 @@ img:not([alt]) {
   border: 1px solid #eceeee;
   background-color: #eceeee;
   font-family: "Caveat", sans-serif;
-  font-size: 1.8rem;
-  margin: 1.2rem 1.2rem 8rem 1.2rem;
-  padding: 1.5rem;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   color: #424242; }
   .ledelicedepapilles span {
     font-weight: bold; }
@@ -469,7 +476,6 @@ footer {
 
   /* -----ACCUEIL-----*/
   .main-page {
-    padding: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -480,14 +486,18 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .main-page .block {
+      width: 90%;
+      height: 30rem;
+      margin: 1rem; }
+      .main-page .block img {
+        width: 4rem; }
 
-  .block {
-    width: 90%;
-    height: 30rem;
-    margin: 1rem; }
-    .block img {
-      width: 4rem;
-      height: 4rem; }
+  main {
+    padding: 1rem 1rem 1rem 1rem;
+    margin-bottom: 7rem; }
+    main .menu-page {
+      padding: 1rem; }
 
   .menu {
     display: -webkit-box;
@@ -496,18 +506,8 @@ footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
-    .menu div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row; }
+            flex-direction: column;
+    margin: 1rem; }
     .menu ul {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -533,6 +533,9 @@ footer {
             -ms-flex-align: center;
                 align-items: center; }
 
+  .lanoteenchantee header .img__logo {
+    width: 5rem; }
+
   footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -552,6 +555,9 @@ footer {
     content: "Version tablette"; }
 
   /* -----ACCUEIL-----*/
+  h1 {
+    font-size: 7rem; }
+
   .main-page {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -559,42 +565,36 @@ footer {
         justify-content: space-around; }
     .main-page article {
       margin: 2rem;
-      width: 40%;
-      height: 50vh; }
+      width: 35%;
+      height: 40vh; }
+      .main-page article .img__logo--frontpage {
+        width: 5rem; }
 
-  .menu-page header h3 {
-    font-size: 7rem; }
+  main {
+    padding: 5rem 10rem 10rem 10rem; }
+    main .menu-page {
+      padding: 3rem; }
+      main .menu-page header h3 {
+        font-size: 5rem; }
 
   .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .menu div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .menu div h5 {
-        font-size: 3.5rem; }
+    margin: 1rem; }
+    .menu div h5 {
+      font-size: 3rem; }
     .menu ul {
-      font-size: 2.2rem; }
+      font-size: 2rem; }
       .menu ul li {
+        text-align: left;
+        margin: 0.6rem 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; }
+                justify-content: space-between;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end; }
 
   .lanoteenchantee header .img__logo {
     width: 7rem; }
@@ -606,8 +606,9 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 4rem; }
+    height: 6rem; }
     footer a {
+      font-size: 3rem;
       margin: 0 10px; } }
 /* Fin de @media (min-width: 40.063em)/* = min-width 641px */
 /* -------------------------------- */
@@ -624,63 +625,13 @@ footer {
   h1 {
     font-size: 7rem; }
 
-  .main-page {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
-    .main-page article {
-      margin: 2rem;
-      width: 35%;
-      height: 70vh; }
-    .main-page .btn {
-      font-size: 3rem; }
+  .main-page article {
+    height: 70vh; }
+  .main-page .btn {
+    font-size: 3rem; }
 
-  .menu-page header h3 {
-    font-size: 10rem; }
-
-  .menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    .menu div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .menu div h5 {
-        font-size: 4rem; }
-    .menu ul {
-      font-size: 2.5rem; }
-      .menu ul li {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-
-  .lanoteenchantee header .img__logo {
-    width: 8rem; }
-
-  footer {
-    height: 6rem;
-    font-size: 3rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-
-  /* -----ACCUEIL-----*/ }
+  main .menu-page {
+    padding: 10rem; } }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */
 
 /*# sourceMappingURL=style.css.map */

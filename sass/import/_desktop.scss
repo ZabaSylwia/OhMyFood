@@ -15,67 +15,22 @@
     h1{
         font-size: 7rem;
     }
+
     .main-page{
-        flex-wrap: wrap;
-        justify-content: space-around;
         article{
-            margin: 2rem;
-            width: 35%;
             height: 70vh;
         }
         .btn{
             font-size: 3rem;
         }
-    }  
-    .menu-page{
-        header{
-            h3{
-                font-size: 10rem;
-            }
+    }
+    
+    main{
+        .menu-page{
+            @include padding(desktop);
         }
     }
     
-    .menu{
-        display: flex;
-        flex-direction: column;
-        
-        div{
-            @include flex;
-            flex-direction: row;
-            justify-content: space-between;
-            h5{
-                font-size: 4rem;
-            }
-        }
-        ul{
-            font-size: 2.5rem;
-            
-            li{
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-
-    }
-
-    .lanoteenchantee{
-        header{
-            .img{
-                &__logo{
-                    width: 8rem;
-                }
-            }
-        }
-    }
-
-    footer{
-        height: 6rem;
-        font-size: 3rem;
-        align-items: center;
-    }
-    
-
-    /* -----ACCUEIL-----*/
 
 }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */

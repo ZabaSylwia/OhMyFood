@@ -17,30 +17,30 @@
     /* -----ACCUEIL-----*/   
 
     .main-page{
-        padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    
-    .block{
-        width: 90%;
-        height: 30rem;
-        margin: 1rem;   
-        img{
-            width: 4rem;
-            height: 4rem;
-        }     
+        .block{
+            width: 90%;
+            height: 30rem;
+            margin: 1rem;   
+            img{
+                width: 4rem;
+            }     
+        }
     }
 
+    main{
+        padding: 1rem 1rem 1rem 1rem;
+        margin-bottom: 7rem;
+        .menu-page{
+            @include padding(mobile);
+        }
+    }
     .menu{
         @include flex;
         flex-direction: column;
-        div{
-            @include flex;
-            justify-content: space-between;
-            flex-direction: row;
-        }
+        margin: 1rem;
         ul{
             @include flex;
             flex-direction: column;
@@ -56,7 +56,16 @@
         }
         
     }
-    
+    .lanoteenchantee{
+        header{
+            .img{
+                &__logo{
+                    width: 5rem;
+                }
+            }
+        }
+    }
+
     footer{
         flex-direction: column;
         padding: 1rem 0;

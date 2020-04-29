@@ -25,16 +25,6 @@ $lapalettedugout__text--2: hsl(90, 100%, 75%); /* lime bright*/
 $lapalettedugout__text--0-5: hsl(101, 51%, 58%); /*transition color*/
 
 
-
-/*maps*/
-
-$bg-color: (
-    1: $lanoteenchantee__background,
-    2: $lechicalafrancaise__background,
-    3: $ledelicedespapilles__backrgound,
-    4: $lapalettedugout__background
-);
-
 /* -----TYPOGRAPHIE-----*/
 $primary-typo: "Montserrat", sans-serif;
 
@@ -62,6 +52,7 @@ $anim-delay: $anim-dur/$num-dot;
 
 /*---MAPS---*/
 
+/*maps*/
 $txt-color-chic: (
     1: $lechicalafrancaise__text--1,
     2: $lechicalafrancaise__text--2,
@@ -94,7 +85,15 @@ $txt-typo: (
     3: $ledelicedespapilles__typo--tertiary
 );
 
+$menu-section-padding: (
+    mobile: 1rem,
+    tablette: 3rem,
+    desktop: 10rem
+);
 
+@mixin padding($resolution){
+    padding: map-get($menu-section-padding, $resolution);
+}
 
 /* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
 $marge-int-gauche-md: 5rem;
@@ -149,9 +148,7 @@ $marge-int-bas-sm: 0rem;
     border: 1px solid map-get($bg-color, $number);
     background-color: map-get($bg-color, $number);
     font-family: map-get($txt-typo, $number);
-    font-size: 1.8rem;
-    margin: 1.2rem 1.2rem 8rem 1.2rem;
-    padding: 1.5rem;
+    box-shadow: 1px 1px 5px grey;
     span{
         font-weight: bold;
     }

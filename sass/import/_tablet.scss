@@ -13,43 +13,53 @@
     }
 
     /* -----ACCUEIL-----*/
+
+    h1{
+        font-size: 7rem;
+    }
+
     .main-page{
         flex-wrap: wrap;
         justify-content: space-around;
         article{
             margin: 2rem;
-            width: 40%;
-            height: 50vh;
+            width: 35%;
+            height: 40vh;
+            .img__logo--frontpage{
+                width: 5rem;
+            }
         }
     }
 
-    .menu-page{
-        header{
-            h3{
-                font-size: 7rem;
+    main{
+        padding: 5rem 10rem 10rem 10rem;
+        .menu-page{
+            @include padding(tablette);
+            header{
+                h3{
+                    font-size: 5rem;
+                }
             }
         }
     }
     
-    
     .menu{
-        display: flex;
-        flex-direction: column;
-        
+        margin: 1rem;
         div{
-            @include flex;
-            flex-direction: row;
-            justify-content: space-between;
+            
             h5{
-                font-size: 3.5rem;
+                font-size: 3rem;
             }
         }
         ul{
-            font-size: 2.2rem;
+            font-size: 2rem;
             
             li{
+                text-align: left;
+                margin: 0.6rem 0;
                 display: flex;
                 justify-content: space-between;
+                align-items: flex-end;
             }
         }
     }
@@ -67,14 +77,11 @@
     footer{
         justify-content: space-between;
         align-items: center;
-        height: 4rem;
+        height: 6rem;
         a{
+            font-size: 3rem;
             margin: 0 10px;
-
         }
-        
-        
     }
-
 }
 /* Fin de @media (min-width: 40.063em)/* = min-width 641px */

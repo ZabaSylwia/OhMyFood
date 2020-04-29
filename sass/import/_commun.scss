@@ -129,7 +129,13 @@ img:not([alt]) {
 
 /* page - lanoteenchantee*/
 
-
+.menu{
+    div{
+        @include flex;
+            justify-content: space-between;
+            flex-direction: row;
+    }
+}
 
 
 .lanoteenchantee{
