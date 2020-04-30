@@ -60,6 +60,10 @@ p {
     padding: map-get($menu-section-padding, $resolution);
 }
 
+@mixin margin($resolution){
+    margin: map-get($menu-section-margin, $resolution);
+}
+
 @mixin flex {
     display: flex;
 }

@@ -8,7 +8,7 @@
 
 @media (min-width: 64.063em){
     h1{
-        font-size: 7rem;
+        font-size: 10rem;
     }
     .main-page{
         article{
@@ -22,7 +22,13 @@
     }
     .main-page,
     .menu-page{
+            @include margin(desktop);
+    }
+
+    main{
+        .menu-page{
             @include padding(desktop);
+        }
     }
 }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */

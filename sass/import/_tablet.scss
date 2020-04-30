@@ -14,20 +14,25 @@
     .main-page{
         flex-wrap: wrap;
         justify-content: space-around;
+        @include margin(tablette);
         article{
             margin: 2rem;
-            width: 35%;
-            height: 40vh;
+            width: 40%;
+            height: 35vh;
             .img__logo--frontpage{
                 width: 5rem;
             }
         }
+        .btn{
+            font-size: 3rem;
+            width: 30vh;
+        }
     }
 
     main{
-        padding: 5rem 10rem 10rem 10rem;
         .menu-page{
             @include padding(tablette);
+            @include margin(tablette);
             header{
                 h3{
                     font-size: 5rem;

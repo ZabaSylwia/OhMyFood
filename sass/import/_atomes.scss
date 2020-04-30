@@ -84,8 +84,14 @@ $txt-typo: (
 
 $menu-section-padding: (
     mobile: 1rem,
-    tablette: 3rem,
-    desktop: 10rem
+    tablette: 5%,
+    desktop: 7%
+);
+
+$menu-section-margin:(
+    mobile: 1rem,
+    tablette: 10% 15%,
+    desktop: 5% 20%
 );
 
 $gradientcolor-left: (
