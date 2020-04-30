@@ -152,8 +152,6 @@ a {
 /*Variables d'animation*/
 /*---MAPS---*/
 /*maps*/
-/* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
-/* -----ESPACES MOBILES ET TABLETTES-----*/
 /* ----------------------------- */
 /* _molecules.scss (éléments génériques comme les titres/boutons/liens/paragraphes qu'on retrouvera sur le fichier molécules) */
 /* ----------------------------- */
@@ -324,6 +322,23 @@ img:not([alt]) {
   .block__lapalettedugout p {
     font-family: "Itim", cursive, sans-serif;
     font-style: italic; }
+
+/*gradient*/
+.title__lechicalafrancaise {
+  background: -webkit-gradient(linear, left top, right top, from(#c57411), to(#6e4ccd));
+  background: linear-gradient(to right, #c57411 0%, #6e4ccd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.title__ledelicedespapilles {
+  background: -webkit-gradient(linear, left top, right top, from(#0021db), to(#249df9));
+  background: linear-gradient(to right, #0021db 0%, #249df9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+.title__lapalettedugout {
+  background: -webkit-gradient(linear, left top, right top, from(#3d923a), to(#bfff80));
+  background: linear-gradient(to right, #3d923a 0%, #bfff80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
 
 .btn {
   background-color: #589d88;
@@ -628,7 +643,8 @@ footer {
   .main-page article {
     height: 70vh; }
   .main-page .btn {
-    font-size: 3rem; }
+    font-size: 3rem;
+    width: 50vh; }
 
   main .menu-page {
     padding: 10rem; } }

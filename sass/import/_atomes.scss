@@ -91,42 +91,20 @@ $menu-section-padding: (
     desktop: 10rem
 );
 
+$gradientcolor-left: (
+    2: $lechicalafrancaise__text--1,
+    3: $ledelicedespapilles__text--1,
+    4: $lapalettedugout__text--1
+);
+
+$gradientcolor-right: (
+    2: $lechicalafrancaise__text--3,
+    3: $ledelicedespapilles__text--3,
+    4: $lapalettedugout__text--2
+);
+
 @mixin padding($resolution){
     padding: map-get($menu-section-padding, $resolution);
-}
-
-/* -----ESPACES ECRANS MOYEN ET GRANDS ECRANS-----*/
-$marge-int-gauche-md: 5rem;
-$marge-int-droite-md: 5rem;
-$marge-int-haut-md: 5rem;
-$marge-int-bas-md: 5rem;
-
-@mixin marges-int-horizontales-md {
-    padding-left: $marge-int-gauche-md;
-    padding-right: $marge-int-droite-md;
-}
-
-
-@mixin marges-int-verticales-md {
-    padding-top: $marge-int-haut-md;
-    padding-bottom: $marge-int-bas-md;
-}
-
-
-/* -----ESPACES MOBILES ET TABLETTES-----*/
-$marge-int-gauche-sm: 0rem;
-$marge-int-droite-sm: 0rem;
-$marge-int-haut-sm: 0rem;
-$marge-int-bas-sm: 0rem;
-
-@mixin marges-int-horizontales-sm {
-    padding-left: $marge-int-gauche-sm;
-    padding-right: $marge-int-droite-sm;
-}
-
-@mixin marges-int-verticales-sm {
-    padding-top: $marge-int-haut-sm;
-    padding-bottom: $marge-int-bas-sm;
 }
 
 @mixin flex {
@@ -158,3 +136,8 @@ $marge-int-bas-sm: 0rem;
     color: map-get($txt-color-chic, $number);
 }
 
+@mixin title-gradient($number){
+    background: linear-gradient(to right, map-get($gradientcolor-left, $number) 0%, map-get($gradientcolor-right, $number)100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}

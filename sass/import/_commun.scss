@@ -123,6 +123,21 @@ img:not([alt]) {
     }
 }
 
+/*gradient*/
+
+.title{
+    &__lechicalafrancaise{
+        @include title-gradient(2)
+    }
+    &__ledelicedespapilles{
+        @include title-gradient(3)
+    }
+    &__lapalettedugout{
+        @include title-gradient(4)
+    }
+
+}
+
 .btn{
     @include button-general;
 }
