@@ -7,13 +7,6 @@
 /* ----------------------------------------------------------------- */
 @media (min-width: 40.063em) {
 
-    body:before {
-        @include bandeau-resolution;
-        content: "Version tablette";   
-    }
-
-    /* -----ACCUEIL-----*/
-
     h1{
         font-size: 7rem;
     }

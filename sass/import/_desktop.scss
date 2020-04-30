@@ -6,18 +6,13 @@
 
 /* -------------------------------- */
 
-@media (min-width: 64.063em) {
-    body:before {
-        @include bandeau-resolution;
-        content: "Version Ordinateur"; 
-    }   
-
+@media (min-width: 64.063em){
     h1{
         font-size: 7rem;
     }
-
     .main-page{
         article{
+            width: 40%;
             height: 70vh;
         }
         .btn{
@@ -25,14 +20,10 @@
             width: 50vh;
         }
     }
-    
-    main{
-        .menu-page{
+    .main-page,
+    .menu-page{
             @include padding(desktop);
-        }
     }
-    
-
 }
 /* Fin de @media (max-width: 64.063em) /* = min-width 1025px */
 

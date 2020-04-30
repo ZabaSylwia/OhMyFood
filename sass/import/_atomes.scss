@@ -46,9 +46,6 @@ $lapalettedugout__typo--secondary: "Chilanka", sans-serif;
 /*Variables d'animation*/
 
 $shake-intensity: 10%;
-$num-dot: 3;
-$anim-dur: 900ms;
-$anim-delay: $anim-dur/$num-dot;
 
 /*---MAPS---*/
 
@@ -101,43 +98,4 @@ $gradientcolor-right: (
     2: $lechicalafrancaise__text--3,
     3: $ledelicedespapilles__text--3,
     4: $lapalettedugout__text--2
-);
-
-@mixin padding($resolution){
-    padding: map-get($menu-section-padding, $resolution);
-}
-
-@mixin flex {
-    display: flex;
-}
-
-@mixin primary-setting {
-    background-color: $primary-color-background;
-    color: $primary-color-text;
-    font-family: $primary-typo;
-}
-
-@mixin menu($number){
-    background-color: map-get($bg-color, $number);
-    font-family: map-get($title-typo, $number );
-}
-
-@mixin menu-section($number){
-    border: 1px solid map-get($bg-color, $number);
-    background-color: map-get($bg-color, $number);
-    font-family: map-get($txt-typo, $number);
-    box-shadow: 1px 1px 5px grey;
-    span{
-        font-weight: bold;
-    }
-}
-
-@mixin txt-color-chic($number){
-    color: map-get($txt-color-chic, $number);
-}
-
-@mixin title-gradient($number){
-    background: linear-gradient(to right, map-get($gradientcolor-left, $number) 0%, map-get($gradientcolor-right, $number)100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-}
+    );

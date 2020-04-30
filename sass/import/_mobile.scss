@@ -9,13 +9,6 @@
 
 /* @media query optionnelle (max-width: 640px)*/
 @media (max-width: 640px) {
-    body:before {
-        @include bandeau-resolution;
-        content: "Version mobile";   
-    }
-    
-    /* -----ACCUEIL-----*/   
-
     .main-page{
         flex-direction: column;
         justify-content: center;

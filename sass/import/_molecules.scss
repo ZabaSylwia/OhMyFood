@@ -55,6 +55,48 @@ p {
     border-radius: 10px;
 }
 
+/*mixins*/
+
+@mixin padding($resolution){
+    padding: map-get($menu-section-padding, $resolution);
+}
+
+@mixin flex {
+    display: flex;
+}
+
+@mixin primary-setting {
+    background-color: $primary-color-background;
+    color: $primary-color-text;
+    font-family: $primary-typo;
+}
+
+@mixin menu($number){
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($title-typo, $number );
+}
+
+@mixin menu-section($number){
+    border: 1px solid map-get($bg-color, $number);
+    background-color: map-get($bg-color, $number);
+    font-family: map-get($txt-typo, $number);
+    box-shadow: 1px 1px 5px grey;
+    span{
+        font-weight: bold;
+    }
+}
+
+@mixin txt-color-chic($number){
+    color: map-get($txt-color-chic, $number);
+}
+
+@mixin title-gradient($number){
+    background: linear-gradient(to right, map-get($gradientcolor-left, $number) 0%, map-get($gradientcolor-right, $number)100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
 /*keyframes*/
 
 @keyframes wiggle {
@@ -64,4 +106,10 @@ p {
     75% {
       transform: translateX($shake-intensity * -1);
     }
+}
+
+@keyframes opacity {
+    0% { opacity: 1;}
+    40% { opacity: 0;}
+    70% { opacity: 1;}
 }
