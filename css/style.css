@@ -131,9 +131,6 @@ a {
 @-o-viewport {
   width: device-width;
   zoom: 1.0; }
-@viewport {
-  width: device-width;
-  zoom: 1.0; }
 /* -----COULEURS-----*/
 /*navy*/
 /*navy*/
@@ -166,9 +163,7 @@ h5 {
   font-size: 2rem;
   line-height: 1.1667;
   margin: 0;
-  padding: 0;
-  /* à déterminer selon les variables COULEURS du fichier _atomes */
-  /* à déterminer selon les variables TYPOGRAPHIE du fichier _atomes */ }
+  padding: 0; }
 
 a {
   text-decoration: none;
@@ -191,7 +186,7 @@ p {
   0% {
     -webkit-transform: translate(1px, 1px) rotate(0deg);
             transform: translate(1px, 1px) rotate(0deg); }
-  0% {
+  10% {
     -webkit-transform: translate(-1px, -2px) rotate(-1deg);
             transform: translate(-1px, -2px) rotate(-1deg); }
   20% {
@@ -225,7 +220,7 @@ p {
   0% {
     -webkit-transform: translate(1px, 1px) rotate(0deg);
             transform: translate(1px, 1px) rotate(0deg); }
-  0% {
+  10% {
     -webkit-transform: translate(-1px, -2px) rotate(-1deg);
             transform: translate(-1px, -2px) rotate(-1deg); }
   20% {
@@ -379,19 +374,16 @@ img:not([alt]) {
   background: -webkit-gradient(linear, left top, right top, from(#c57411), to(#6e4ccd));
   background: linear-gradient(to right, #c57411 0%, #6e4ccd 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent; }
 .title__ledelicedespapilles {
   background: -webkit-gradient(linear, left top, right top, from(#0021db), to(#249df9));
   background: linear-gradient(to right, #0021db 0%, #249df9 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent; }
 .title__lapalettedugout {
   background: -webkit-gradient(linear, left top, right top, from(#3d923a), to(#bfff80));
   background: linear-gradient(to right, #3d923a 0%, #bfff80 100%);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent; }
 
 /*fin gradient*/
