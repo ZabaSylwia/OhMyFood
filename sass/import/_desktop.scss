@@ -14,15 +14,18 @@
         article{
             width: 40%;
             height: 70vh;
+            
         }
         .btn{
             font-size: 3rem;
-            width: 60vh;
         }
     }
     .main-page,
     .menu-page{
             @include margin(desktop);
+            h3{
+                font-size: 4rem;
+            }
     }
 
     main{

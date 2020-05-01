@@ -32,15 +32,19 @@ h5{
 
 a {
     text-decoration: none;
-    margin: auto;
     color: inherit;
     &:visited{
         color: inherit;
     }
 }
 
+img,
+p,
+h3{
+    margin: 0;
+}
+
 p {
-    margin: auto;
     font-size: 3rem;
 }
 /* -----BOUTONS-----*/
@@ -50,7 +54,7 @@ p {
     font-size: 2rem;
     font-weight: lighter;
     margin: 2rem auto 9rem auto;
-    padding: 0.5rem 3rem;
+    padding: 0.7rem 2rem;
     border-radius: 10px;
 }
 
